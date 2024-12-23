@@ -66,9 +66,9 @@
 
         async function obtenerDolarTarjeta() {
             try {
-                const response = await fetch('https://dolarapi.com/v1/dolares/tarjeta');
+                const response = await fetch('https://mercados.ambito.com//dolarturista/variacion');
                 const data = await response.json();
-                dolarTarjeta = data?.venta;
+                dolarTarjeta = data?.venta.replace(',', '.');
 
                 if (dolarTarjeta) {
                     document.getElementById('dolarTarjeta').innerText = `El valor del dólar tarjeta es de: $${dolarTarjeta} ARS`;
