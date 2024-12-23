@@ -53,12 +53,13 @@
     <div class="container">
         <h1>Calculadora de Robux a Dólares</h1>
         <h3 id="dolarTarjeta">Cargando valor del dólar tarjeta...</h3>
-        <label for="robux">Escriba aquí la cantidad de Robux:</label>
+        <label for="robux">Escribí acá la cantidad de Robux amorcito:</label>
         <input type="number" id="robux" placeholder="Ingresa la cantidad de Robux">
         <button onclick="convertir()">Convertir</button>
         <p id="respuesta" style="color: red;"></p>
         <p id="resultadoDolares"></p>
         <p id="resultadoPesos"></p>
+        <p id="mensaje"></p>
     </div>
 
     <script>
@@ -103,6 +104,7 @@
 
             document.getElementById('resultadoDolares').innerHTML = `El valor de <strong>${robux}</strong> Robux en dólares es: <strong>$${resultadoDolares.toFixed(5)} USD</strong>`;
             document.getElementById('resultadoPesos').innerHTML = `El valor de <strong>${robux}</strong> Robux en pesos es: <strong>$${Math.ceil(resultadoPesos)} ($${Math.ceil(resultadoPesos/100)*100} redondeando) ARS</strong>`;
+            document.getElementById('mensaje').innerHTML = `El valor de mi <strong>amor</strong> por ti es: ∞ (infinito)`;
         }
 
         window.onload = obtenerDolarTarjeta;
