@@ -30,8 +30,8 @@ a{text-decoration:none;color:inherit;}
 
 /* HEADER */
 header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(28,23,18,.07);}
-.header-inner{max-width:1160px;margin:0 auto;padding:0 16px;height:70px;display:flex;align-items:center;justify-content:space-between;gap:8px;}
-.logo{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.header-inner{max-width:1160px;margin:0 auto;padding:0 16px;height:80px;display:flex;align-items:center;justify-content:space-between;gap:8px;}
+.logo{display:flex;align-items:center;gap:12px;flex-shrink:0;}
 .logo-icon{width:38px;height:38px;background:var(--ink);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--gold2);font-size:20px;flex-shrink:0;}
 .logo-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:var(--ink);}
 .logo-sub{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:2px;}
@@ -136,13 +136,22 @@ nav a:hover{background:var(--cream);color:var(--gold);}
 .p-final{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--ink);}
 .p-promo{color:var(--rust);}
 .p-none{font-size:13px;color:var(--muted);font-style:italic;}
-.book-actions{display:flex;gap:8px;}
-.btn-mp{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;background:#009ee3;color:white;border:none;border-radius:6px;padding:9px 8px;font-size:11px;font-weight:700;cursor:pointer;transition:all .2s;text-transform:uppercase;letter-spacing:.3px;font-family:'DM Sans',sans-serif;}
+.book-actions{display:flex;gap:5px;flex-wrap:wrap;}
+.btn-mp,.btn-wa,.btn-ml,.btn-amz{flex:1 1 calc(50% - 3px);display:flex;align-items:center;justify-content:center;gap:4px;border:none;border-radius:6px;padding:8px 4px;font-size:10px;font-weight:700;cursor:pointer;transition:all .2s;text-transform:uppercase;letter-spacing:.2px;font-family:'DM Sans',sans-serif;min-width:0;}
+.btn-mp{background:#009ee3;color:white;}
 .btn-mp:hover:not(:disabled){background:#0080c0;}
 .btn-mp:disabled{background:#c8c8c8;cursor:not-allowed;}
-.btn-mp svg{width:13px;height:13px;fill:white;flex-shrink:0;}
-.btn-wa{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;background:#25d366;color:white;border:none;border-radius:6px;padding:9px 8px;font-size:11px;font-weight:700;cursor:pointer;transition:all .2s;text-transform:uppercase;letter-spacing:.3px;font-family:'DM Sans',sans-serif;}
+.btn-mp svg{width:11px;height:11px;fill:white;flex-shrink:0;}
+.btn-wa{background:#25d366;color:white;}
 .btn-wa:hover{background:#1ebe5c;}
+.btn-wa.disabled{background:#c8c8c8;cursor:not-allowed;pointer-events:none;}
+.btn-wa svg{width:11px;height:11px;fill:white;flex-shrink:0;}
+.btn-ml{background:#ffe600;color:#333;}
+.btn-ml:hover:not(:disabled){background:#f0d800;}
+.btn-ml:disabled{background:#c8c8c8;color:white;cursor:not-allowed;}
+.btn-amz{background:#ff9900;color:#111;}
+.btn-amz:hover:not(:disabled){background:#e68a00;}
+.btn-amz:disabled{background:#c8c8c8;color:white;cursor:not-allowed;}
 .btn-wa.disabled{background:#c8c8c8;cursor:not-allowed;pointer-events:none;}
 .btn-wa svg{width:13px;height:13px;fill:white;flex-shrink:0;}
 
@@ -242,7 +251,7 @@ footer{background:var(--ink);color:#6a5f54;padding:48px 24px 24px;}
 <header>
   <div class="header-inner">
     <a href="#" class="logo">
-      <img src="logo.png" alt="delibroscristianos" style="height:42px;width:42px;object-fit:contain;border-radius:8px;background:white;padding:3px;">
+      <img src="logo.png" alt="delibroscristianos" style="height:62px;width:62px;object-fit:contain;border-radius:8px;background:white;padding:2px;">
       <div>
         <div class="logo-name">delibroscristianos</div>
         <div class="logo-sub">Editorial Argentina</div>
@@ -421,17 +430,17 @@ footer{background:var(--ink);color:#6a5f54;padding:48px 24px 24px;}
 var PHONE = '5491165454453';
 
 var books = [
-  { id:0,  title:'Stephanie y el camino invisible de Dios', sub:null,                        cat:'novela',    price:34000, promo:null,  stock:10,  color:'bc-0',  mpLink:'#' },
-  { id:1,  title:'Estas Princesas daran que hablar',        sub:'Tapa Flexible',             cat:'infantil',  price:23000, promo:20000, stock:100, color:'bc-1',  mpLink:'#' },
-  { id:2,  title:'Sofie of Sangendrup',                     sub:'English / Ingles',          cat:'novela',    price:45000, promo:null,  stock:0,   color:'bc-2',  mpLink:'#' },
-  { id:3,  title:'Fundamentos para conocer a Dios',         sub:null,                        cat:'cristiano', price:20000, promo:15000, stock:15,  color:'bc-3',  mpLink:'#' },
-  { id:4,  title:'Sucedio en Navidad',                      sub:'Incluye recetas de cocina', cat:'novela',    price:16000, promo:12000, stock:20,  color:'bc-4',  mpLink:'#' },
-  { id:5,  title:'La ratita Rita',                          sub:null,                        cat:'infantil',  price:22000, promo:null,  stock:50,  color:'bc-5',  mpLink:'#' },
-  { id:6,  title:'Eres Padre, Eres Hijo',                   sub:null,                        cat:'cristiano', price:20000, promo:15000, stock:20,  color:'bc-6',  mpLink:'#' },
-  { id:7,  title:'Dormo, el Huerfano, los Gigantes y otras historias', sub:null,             cat:'novela',    price:16000, promo:14000, stock:30,  color:'bc-7',  mpLink:'#' },
-  { id:8,  title:'Cuentan que en Navidad',                  sub:null,                        cat:'novela',    price:null,  promo:null,  stock:0,   color:'bc-8',  mpLink:'#' },
-  { id:9,  title:'Devocional Mantequilla y Miel',           sub:null,                        cat:'cristiano', price:25000, promo:20000, stock:50,  color:'bc-9',  mpLink:'#' },
-  { id:10, title:'Novela Sofie de Sangendrup',              sub:'Espanol',                   cat:'novela',    price:28000, promo:23000, stock:40,  color:'bc-10', mpLink:'#' }
+  { id:0,  title:'Stephanie y el camino invisible de Dios', sub:null,                        cat:'novela',    price:34000, promo:null,  stock:10,  color:'bc-0',  mpLink:'#', mlLink:'#', amzLink:'#' },
+  { id:1,  title:'Estas Princesas daran que hablar',        sub:'Tapa Flexible',             cat:'infantil',  price:23000, promo:20000, stock:100, color:'bc-1',  mpLink:'#', mlLink:'#', amzLink:'#' },
+  { id:2,  title:'Sofie of Sangendrup',                     sub:'English / Ingles',          cat:'novela',    price:45000, promo:null,  stock:0,   color:'bc-2',  mpLink:'#', mlLink:'#', amzLink:'#' },
+  { id:3,  title:'Fundamentos para conocer a Dios',         sub:null,                        cat:'cristiano', price:20000, promo:15000, stock:15,  color:'bc-3',  mpLink:'#', mlLink:'#', amzLink:'#' },
+  { id:4,  title:'Sucedio en Navidad',                      sub:'Incluye recetas de cocina', cat:'novela',    price:16000, promo:12000, stock:20,  color:'bc-4',  mpLink:'#', mlLink:'#', amzLink:'#' },
+  { id:5,  title:'La ratita Rita',                          sub:null,                        cat:'infantil',  price:22000, promo:null,  stock:50,  color:'bc-5',  mpLink:'#', mlLink:'#', amzLink:'#' },
+  { id:6,  title:'Eres Padre, Eres Hijo',                   sub:null,                        cat:'cristiano', price:20000, promo:15000, stock:20,  color:'bc-6',  mpLink:'#', mlLink:'#', amzLink:'#' },
+  { id:7,  title:'Dormo, el Huerfano, los Gigantes y otras historias', sub:null,             cat:'novela',    price:16000, promo:14000, stock:30,  color:'bc-7',  mpLink:'#', mlLink:'#', amzLink:'#' },
+  { id:8,  title:'Cuentan que en Navidad',                  sub:null,                        cat:'novela',    price:null,  promo:null,  stock:0,   color:'bc-8',  mpLink:'#', mlLink:'#', amzLink:'#' },
+  { id:9,  title:'Devocional Mantequilla y Miel',           sub:null,                        cat:'cristiano', price:25000, promo:20000, stock:50,  color:'bc-9',  mpLink:'#', mlLink:'#', amzLink:'#' },
+  { id:10, title:'Novela Sofie de Sangendrup',              sub:'Espanol',                   cat:'novela',    price:28000, promo:23000, stock:40,  color:'bc-10', mpLink:'#', mlLink:'#', amzLink:'#' }
 ];
 
 var catLabel = { novela:'Novela', infantil:'Infantil', cristiano:'Vida Cristiana' };
@@ -464,9 +473,15 @@ function buildCard(b, delay) {
                 '<span class="p-final ' + (b.promo ? 'p-promo' : '') + '">' + fmt(price) + '</span>';
   }
 
-  var mpBtn = '<button class="btn-mp"' + (!avail ? ' disabled' : '') + ' onclick="buyMP(\'' + b.mpLink + '\',\'' + b.title.replace(/'/g,"\\'") + '\')">' +
+  var mpBtn = '<button class="btn-mp"' + (!avail ? ' disabled' : '') + ' onclick="buyMP(\'' + b.mpLink + '\',\'' + b.title.replace(/'/g,"\\'") + '\',\'mp\')">' +
     '<svg viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>' +
     (avail ? 'Mercado Pago' : 'Sin stock') + '</button>';
+
+  var mlBtn = '<button class="btn-ml"' + (!avail ? ' disabled' : '') + ' onclick="buyMP(\'' + b.mlLink + '\',\'' + b.title.replace(/'/g,"\\'") + '\',\'ml\')">' +
+    '&#127868; Mercado Libre</button>';
+
+  var amzBtn = '<button class="btn-amz"' + (!avail ? ' disabled' : '') + ' onclick="buyMP(\'' + b.amzLink + '\',\'' + b.title.replace(/'/g,"\\'") + '\',\'amz\')">' +
+    '&#128230; Amazon</button>';
 
   var waBtn = '<a class="btn-wa' + (!avail ? ' disabled' : '') + '" href="' + (avail ? waLink : '#') + '" ' + (avail ? 'target="_blank"' : '') + '>' +
     '<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>' +
@@ -483,7 +498,7 @@ function buildCard(b, delay) {
       (b.sub ? '<div class="book-sub">' + b.sub + '</div>' : '') +
       '<div class="stock-info ' + stockCls + '">' + stockTxt + '</div>' +
       '<div class="price-row">' + priceHtml + '</div>' +
-      '<div class="book-actions">' + mpBtn + waBtn + '</div>' +
+      '<div class="book-actions">' + mpBtn + mlBtn + amzBtn + waBtn + '</div>' +
     '</div></div>';
 }
 
@@ -506,9 +521,10 @@ function filterBooks(f, btn) {
   render(list);
 }
 
-function buyMP(link, title) {
+function buyMP(link, title, platform) {
   if (link === '#') {
-    var msg = encodeURIComponent('Hola! Quiero comprar "' + title + '" con Mercado Pago. Me podes pasar el link de pago?');
+    var platformName = platform === 'ml' ? 'Mercado Libre' : platform === 'amz' ? 'Amazon' : 'Mercado Pago';
+    var msg = encodeURIComponent('Hola! Quiero comprar "' + title + '" por ' + platformName + '. Me podes ayudar?');
     window.open('https://wa.me/' + PHONE + '?text=' + msg, '_blank');
   } else {
     window.open(link, '_blank');
