@@ -66,14 +66,8 @@ nav a:hover{background:var(--cream);color:var(--gold);}
 .hero-stats{display:flex;gap:36px;margin-top:48px;padding-top:36px;border-top:1px solid #2a2318;flex-wrap:wrap;}
 .stat-num{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:700;color:var(--gold2);line-height:1;}
 .stat-label{font-size:11px;color:#6a5f54;text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;}
-.hero-visual{display:flex;gap:16px;align-items:flex-end;flex-shrink:0;}
-.hero-book{border-radius:6px;box-shadow:12px 12px 32px rgba(0,0,0,.5);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px 14px;color:white;transition:transform .3s;cursor:pointer;}
-.hero-book:hover{transform:translateY(-8px) rotate(-1deg) !important;}
-.hero-book .cross{font-size:22px;opacity:.6;margin-bottom:8px;}
-.hero-book .mini{font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:600;line-height:1.3;}
-.hb1{width:100px;height:150px;background:linear-gradient(160deg,#4a5a2a,#6b7c3f);transform:rotate(-3deg);}
-.hb2{width:110px;height:165px;background:linear-gradient(160deg,#4a7a8a,#7ab8d4);}
-.hb3{width:96px;height:144px;background:linear-gradient(160deg,#5a4a7a,#8b7bb5);transform:rotate(2deg);}
+@keyframes floatLogo{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.hero-visual{display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 
 /* STRIP */
 .strip{background:var(--gold);padding:13px 0;overflow:hidden;}
@@ -295,13 +289,11 @@ footer{background:var(--ink);color:#6a5f54;padding:48px 24px 24px;}
       <div class="hero-stats">
         <div><div class="stat-num">11</div><div class="stat-label">Títulos</div></div>
         <div><div class="stat-num">5+</div><div class="stat-label">Años</div></div>
-        <div><div class="stat-num">&#127462;&#127479;</div><div class="stat-label">Todo el país</div></div>
+        <div><div class="stat-num">&#127464;&#127479;</div><div class="stat-label">Todo el país</div></div>
       </div>
     </div>
     <div class="hero-visual">
-      <div class="hero-book hb1"><div class="cross">&#10013;</div><div class="mini">Stephanie y el camino invisible</div></div>
-      <div class="hero-book hb2"><div class="cross">&#10013;</div><div class="mini">Devocional Mantequilla y Miel</div></div>
-      <div class="hero-book hb3"><div class="cross">&#10013;</div><div class="mini">Sucedió en Navidad</div></div>
+      <img src="logo.png" alt="delibroscristianos" style="width:320px;max-width:100%;filter:drop-shadow(0 20px 40px rgba(0,0,0,.4));animation:floatLogo 4s ease-in-out infinite;">
     </div>
   </div>
 </section>
