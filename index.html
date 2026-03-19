@@ -49,7 +49,7 @@ nav a:hover{background:var(--cream);color:var(--gold);}
 .btn-primary:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 8px 20px rgba(196,154,60,.3);}
 .btn-outline{display:inline-flex;align-items:center;gap:8px;border:1px solid #3a3228;color:#ccc;padding:13px 24px;border-radius:6px;font-size:14px;font-weight:500;transition:all .2s;}
 .btn-outline:hover{border-color:var(--gold);color:var(--gold2);}
-.hero-stats{display:flex;gap:36px;margin-top:48px;padding-top:36px;flex-wrap:wrap;}
+.hero-stats{display:flex;gap:36px;margin-top:48px;padding-top:36px;border-top:1px solid #2a2318;flex-wrap:wrap;}
 .stat-num{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:700;color:var(--gold2);line-height:1;}
 .stat-label{font-size:11px;color:#6a5f54;text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;}
 @keyframes floatLogo{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
@@ -82,7 +82,9 @@ nav a:hover{background:var(--cream);color:var(--gold);}
 .book-card{background:var(--white);border-radius:12px;border:1px solid var(--border);overflow:hidden;transition:all .3s;display:flex;flex-direction:column;animation:fadeUp .5s ease both;}
 .book-card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(28,23,18,.13);border-color:var(--gold);}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-.book-cover-wrap{height:200px;display:flex;align-items:center;justify-content:center;background:var(--cream2);position:relative;overflow:hidden;}
+.book-cover-wrap{height:220px;display:flex;align-items:center;justify-content:center;background:var(--cream2);position:relative;overflow:hidden;}
+.book-cover-wrap img{height:100%;width:100%;object-fit:cover;transition:transform .3s;}
+.book-card:hover .book-cover-wrap img{transform:scale(1.05);}
 .bcp{width:110px;height:160px;border-radius:5px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px 12px;text-align:center;color:white;box-shadow:6px 8px 20px rgba(0,0,0,.25);transition:transform .3s;position:relative;}
 .bcp::before{content:'';position:absolute;left:0;top:0;bottom:0;width:7px;background:rgba(0,0,0,.2);border-radius:5px 0 0 5px;}
 .book-card:hover .bcp{transform:rotate(-3deg) scale(1.06);}
@@ -250,11 +252,11 @@ footer{background:var(--ink);color:#6a5f54;padding:48px 24px 24px;}
       <div class="hero-stats">
         <div><div class="stat-num">11</div><div class="stat-label">Títulos</div></div>
         <div><div class="stat-num">5+</div><div class="stat-label">Años</div></div>
-        <div><div class="stat-num">&#127462;&#127479;</div><div class="stat-label">Todo el país</div></div>
+        <div><div class="stat-num">&#127464;&#127479;</div><div class="stat-label">Todo el país</div></div>
       </div>
     </div>
     <div class="hero-visual">
-      <img src="logo-sin-fondo-letras-blancas.png" alt="delibroscristianos" style="width:320px;max-width:100%;animation:floatLogo 4s ease-in-out infinite;">
+      <img src="logo.png" alt="delibroscristianos" style="width:320px;max-width:100%;filter:drop-shadow(0 20px 40px rgba(0,0,0,.4));animation:floatLogo 4s ease-in-out infinite;">
     </div>
   </div>
 </section>
@@ -383,17 +385,17 @@ footer{background:var(--ink);color:#6a5f54;padding:48px 24px 24px;}
 var PHONE = '5491165454453';
 
 var books = [
-  { id:0,  title:'Stephanie y el camino invisible de Dios', sub:null,                        cat:'novela',    price:34000, promo:null,  stock:10,  color:'bc-0',  mpLink:'#', mlLink:'#', amzLink:'#' },
-  { id:1,  title:'Estas Princesas daran que hablar',        sub:'Tapa Flexible',             cat:'infantil',  price:23000, promo:20000, stock:100, color:'bc-1',  mpLink:'#', mlLink:'#', amzLink:'#' },
-  { id:2,  title:'Sofie of Sangendrup',                     sub:'English / Ingles',          cat:'novela',    price:45000, promo:null,  stock:0,   color:'bc-2',  mpLink:'#', mlLink:'#', amzLink:'#' },
-  { id:3,  title:'Fundamentos para conocer a Dios',         sub:null,                        cat:'cristiano', price:20000, promo:15000, stock:15,  color:'bc-3',  mpLink:'#', mlLink:'#', amzLink:'#' },
-  { id:4,  title:'Sucedio en Navidad',                      sub:'Incluye recetas de cocina', cat:'novela',    price:16000, promo:12000, stock:20,  color:'bc-4',  mpLink:'#', mlLink:'#', amzLink:'#' },
-  { id:5,  title:'La ratita Rita',                          sub:null,                        cat:'infantil',  price:22000, promo:null,  stock:50,  color:'bc-5',  mpLink:'#', mlLink:'#', amzLink:'#' },
-  { id:6,  title:'Eres Padre, Eres Hijo',                   sub:null,                        cat:'cristiano', price:20000, promo:15000, stock:20,  color:'bc-6',  mpLink:'#', mlLink:'#', amzLink:'#' },
-  { id:7,  title:'Dormo, el Huerfano, los Gigantes y otras historias', sub:null,             cat:'novela',    price:16000, promo:14000, stock:30,  color:'bc-7',  mpLink:'#', mlLink:'#', amzLink:'#' },
-  { id:8,  title:'Cuentan que en Navidad',                  sub:null,                        cat:'novela',    price:null,  promo:null,  stock:0,   color:'bc-8',  mpLink:'#', mlLink:'#', amzLink:'#' },
-  { id:9,  title:'Devocional Mantequilla y Miel',           sub:null,                        cat:'cristiano', price:25000, promo:20000, stock:50,  color:'bc-9',  mpLink:'#', mlLink:'#', amzLink:'#' },
-  { id:10, title:'Novela Sofie de Sangendrup',              sub:'Espanol',                   cat:'novela',    price:28000, promo:23000, stock:40,  color:'bc-10', mpLink:'#', mlLink:'#', amzLink:'#' }
+  { id:0,  title:'Stephanie y el camino invisible de Dios', sub:null,                        cat:'novela',    price:34000, promo:null,  stock:10,  color:'bc-0',  img:'stephanie.jpg',      mpLink:'#', mlLink:'#', amzLink:'#' },
+  { id:1,  title:'Estas Princesas daran que hablar',        sub:'Tapa Flexible',             cat:'infantil',  price:23000, promo:20000, stock:100, color:'bc-1',  img:'princesas.jpg',      mpLink:'#', mlLink:'#', amzLink:'#' },
+  { id:2,  title:'Sofie of Sangendrup',                     sub:'English / Ingles',          cat:'novela',    price:45000, promo:null,  stock:0,   color:'bc-2',  img:'sofie-ingles.jpg',   mpLink:'#', mlLink:'#', amzLink:'#' },
+  { id:3,  title:'Fundamentos para conocer a Dios',         sub:null,                        cat:'cristiano', price:20000, promo:15000, stock:15,  color:'bc-3',  img:'fundamentos.jpg',    mpLink:'#', mlLink:'#', amzLink:'#' },
+  { id:4,  title:'Sucedio en Navidad',                      sub:'Incluye recetas de cocina', cat:'novela',    price:16000, promo:12000, stock:20,  color:'bc-4',  img:'navidad.jpg',        mpLink:'#', mlLink:'#', amzLink:'#' },
+  { id:5,  title:'La ratita Rita',                          sub:null,                        cat:'infantil',  price:22000, promo:null,  stock:50,  color:'bc-5',  img:'ratita-rita.jpg',    mpLink:'#', mlLink:'#', amzLink:'#' },
+  { id:6,  title:'Eres Padre, Eres Hijo',                   sub:null,                        cat:'cristiano', price:20000, promo:15000, stock:20,  color:'bc-6',  img:'eres-padre.jpg',     mpLink:'#', mlLink:'#', amzLink:'#' },
+  { id:7,  title:'Dormo, el Huerfano, los Gigantes y otras historias', sub:null,             cat:'novela',    price:16000, promo:14000, stock:30,  color:'bc-7',  img:'dormo.jpg',          mpLink:'#', mlLink:'#', amzLink:'#' },
+  { id:8,  title:'Cuentan que en Navidad',                  sub:null,                        cat:'novela',    price:null,  promo:null,  stock:0,   color:'bc-8',  img:'cuentan-navidad.jpg',mpLink:'#', mlLink:'#', amzLink:'#' },
+  { id:9,  title:'Devocional Mantequilla y Miel',           sub:null,                        cat:'cristiano', price:25000, promo:20000, stock:50,  color:'bc-9',  img:'mantequilla.jpg',    mpLink:'#', mlLink:'#', amzLink:'#' },
+  { id:10, title:'Novela Sofie de Sangendrup',              sub:'Espanol',                   cat:'novela',    price:28000, promo:23000, stock:40,  color:'bc-10', img:'sofie-ingles.jpg',   mpLink:'#', mlLink:'#', amzLink:'#' }
 ];
 
 var catLabel = { novela:'Novela', infantil:'Infantil', cristiano:'Vida Cristiana' };
@@ -442,7 +444,7 @@ function buildCard(b, delay) {
 
   return '<div class="book-card" style="animation-delay:' + delay + 'ms">' +
     '<div class="book-cover-wrap">' +
-      '<div class="bcp ' + b.color + '"><div class="cross">&#10013;</div><div class="btitle">' + b.title + '</div></div>' +
+      '<img src="' + b.img + '" alt="' + b.title + '" onerror="this.parentNode.innerHTML=\'<div class=\\\"bcp ' + b.color + '\\\"><div class=\\\"cross\\\">&#10013;</div><div class=\\\"btitle\\\">' + b.title.replace(/'/g,"\\'") + '</div></div>\'">' +
       '<div class="badge-wrap">' + badges + '</div>' +
     '</div>' +
     '<div class="book-body">' +
