@@ -3,117 +3,109 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Editorialdelibroscristianos</title>
+<title>delibroscristianos — Editorial</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --cream: #f7f3ec;
-  --cream2: #efe9de;
-  --ink: #1c1712;
-  --ink2: #3a3228;
-  --muted: #8a7d6e;
-  --gold: #c49a3c;
-  --gold2: #e8b84b;
-  --rust: #9b3d2b;
-  --white: #fff;
-  --border: #ddd5c5;
-  --green: #2d6a4f;
+  --cream:#f7f3ec; --cream2:#efe9de; --ink:#1c1712; --ink2:#3a3228;
+  --muted:#8a7d6e; --gold:#c49a3c; --gold2:#e8b84b; --rust:#9b3d2b;
+  --white:#fff; --border:#ddd5c5; --green:#2d6a4f;
 }
-* { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100%; }
-body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; max-width: 100%; }
-a { text-decoration: none; color: inherit; }
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
 
 /* TOPBAR */
-.topbar { background: var(--ink); color: #aaa; font-size: 12px; padding: 8px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
-.topbar-left { display: flex; gap: 20px; align-items: center; }
-.topbar-left a { color: #aaa; display: flex; align-items: center; gap: 6px; transition: color .2s; }
-.topbar-left a:hover { color: var(--gold2); }
-.topbar-right { display: flex; gap: 8px; }
-.topbar-right a { color: #ccc; border: 1px solid #3a3228; padding: 3px 12px; border-radius: 20px; font-size: 11px; transition: all .2s; }
-.topbar-right a:hover { border-color: var(--gold); color: var(--gold2); }
+.topbar{background:var(--ink);color:#aaa;font-size:12px;padding:8px 24px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;}
+.topbar-left{display:flex;gap:20px;align-items:center;}
+.topbar-left a{color:#aaa;display:flex;align-items:center;gap:6px;transition:color .2s;}
+.topbar-left a:hover{color:var(--gold2);}
+.topbar-right{display:flex;gap:8px;}
+.topbar-right a{color:#ccc;border:1px solid #3a3228;padding:3px 12px;border-radius:20px;font-size:11px;transition:all .2s;}
+.topbar-right a:hover{border-color:var(--gold);color:var(--gold2);}
 
 /* HEADER */
-header { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 16px rgba(28,23,18,.07); width: 100%; box-sizing: border-box; }
-.header-inner { max-width: 1160px; margin: 0 auto; padding: 0 16px; height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-sizing: border-box; }
-.logo { display: flex; align-items: center; gap: 12px; }
-.logo-icon { width: 42px; height: 42px; background: var(--ink); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--gold2); font-size: 22px; }
-.logo-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 700; color: var(--ink); }
-.logo-sub { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 2px; }
-nav { display: flex; gap: 4px; }
-nav a { padding: 8px 14px; font-size: 13px; font-weight: 500; color: var(--ink2); border-radius: 6px; transition: all .2s; }
-nav a:hover { background: var(--cream); color: var(--gold); }
-.header-right { display: flex; align-items: center; gap: 10px; }
-.btn-wa-header { display: flex; align-items: center; gap: 7px; background: #25d366; color: white; padding: 8px 16px; border-radius: 6px; font-size: 12px; font-weight: 600; transition: background .2s; }
-.btn-wa-header:hover { background: #1ebe5c; }
-.btn-wa-header svg { width: 15px; height: 15px; fill: white; }
-.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; flex-direction: column; gap: 5px; }
-.hamburger span { display: block; width: 22px; height: 2px; background: var(--ink); border-radius: 2px; }
-.mobile-nav { display: none; flex-direction: column; background: var(--white); border-top: 1px solid var(--border); padding: 12px 24px 20px; gap: 4px; }
-.mobile-nav.open { display: flex; }
-.mobile-nav a { padding: 10px 0; font-size: 15px; font-weight: 500; color: var(--ink2); border-bottom: 1px solid var(--cream2); }
+header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(28,23,18,.07);}
+.header-inner{max-width:1160px;margin:0 auto;padding:0 16px;height:70px;display:flex;align-items:center;justify-content:space-between;gap:8px;}
+.logo{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.logo-icon{width:38px;height:38px;background:var(--ink);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--gold2);font-size:20px;flex-shrink:0;}
+.logo-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:var(--ink);}
+.logo-sub{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:2px;}
+nav{display:flex;gap:2px;}
+nav a{padding:8px 12px;font-size:13px;font-weight:500;color:var(--ink2);border-radius:6px;transition:all .2s;white-space:nowrap;}
+nav a:hover{background:var(--cream);color:var(--gold);}
+.header-right{display:flex;align-items:center;gap:8px;flex-shrink:0;}
+.btn-wa-header{display:flex;align-items:center;gap:6px;background:#25d366;color:white;padding:8px 14px;border-radius:6px;font-size:12px;font-weight:600;transition:background .2s;white-space:nowrap;}
+.btn-wa-header:hover{background:#1ebe5c;}
+.btn-wa-header svg{width:14px;height:14px;fill:white;}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px;flex-direction:column;gap:5px;flex-shrink:0;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;}
+.mobile-nav{display:none;flex-direction:column;background:var(--white);border-top:1px solid var(--border);padding:12px 24px 20px;gap:4px;}
+.mobile-nav.open{display:flex;}
+.mobile-nav a{padding:12px 0;font-size:15px;font-weight:500;color:var(--ink2);border-bottom:1px solid var(--cream2);}
 
 /* HERO */
-.hero { background: var(--ink); padding: 72px 24px 80px; position: relative; overflow: hidden; max-width: 100%; }
-.hero::before { content: '✝'; position: absolute; right: -2%; top: -10%; font-size: 420px; color: rgba(196,154,60,.05); pointer-events: none; line-height: 1; overflow: hidden; }
-.hero-inner { max-width: 1160px; margin: 0 auto; display: flex; align-items: center; gap: 60px; width: 100%; }
-.hero-text { flex: 1; }
-.hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; text-transform: uppercase; letter-spacing: 3px; color: var(--gold2); margin-bottom: 20px; }
-.hero-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--gold2); }
-.hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 58px; font-weight: 700; color: var(--white); line-height: 1.1; margin-bottom: 20px; }
-.hero h1 em { color: var(--gold2); font-style: italic; }
-.hero p { font-size: 16px; color: #9a8f82; line-height: 1.7; margin-bottom: 36px; max-width: 480px; }
-.hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
-.btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--gold); color: var(--white); padding: 13px 24px; border-radius: 6px; font-size: 14px; font-weight: 600; transition: all .2s; }
-.btn-primary:hover { background: var(--gold2); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(196,154,60,.3); }
-.btn-outline { display: inline-flex; align-items: center; gap: 8px; border: 1px solid #3a3228; color: #ccc; padding: 13px 24px; border-radius: 6px; font-size: 14px; font-weight: 500; transition: all .2s; }
-.btn-outline:hover { border-color: var(--gold); color: var(--gold2); }
-.hero-stats { display: flex; gap: 36px; margin-top: 48px; padding-top: 36px; border-top: 1px solid #2a2318; }
-.stat-num { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 700; color: var(--gold2); line-height: 1; }
-.stat-label { font-size: 11px; color: #6a5f54; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 4px; }
-.hero-visual { display: flex; gap: 16px; align-items: flex-end; flex-shrink: 0; }
-.hero-book { border-radius: 6px; box-shadow: 12px 12px 32px rgba(0,0,0,.5); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px 14px; color: white; transition: transform .3s; cursor: pointer; }
-.hero-book:hover { transform: translateY(-8px) rotate(-1deg) !important; }
-.hero-book .cross { font-size: 22px; opacity: .6; margin-bottom: 8px; }
-.hero-book .mini { font-family: 'Cormorant Garamond', serif; font-size: 11px; font-weight: 600; line-height: 1.3; }
-.hb1 { width: 100px; height: 150px; background: linear-gradient(160deg,#5a1f0f,#9b3d2b); transform: rotate(-3deg); }
-.hb2 { width: 110px; height: 165px; background: linear-gradient(160deg,#1a3a5f,#2d6a9f); }
-.hb3 { width: 96px; height: 144px; background: linear-gradient(160deg,#2d5a1f,#4a9b3d); transform: rotate(2deg); }
+.hero{background:var(--ink);padding:72px 24px 80px;position:relative;overflow:hidden;}
+.hero::before{content:'✝';position:absolute;right:-2%;top:-10%;font-size:420px;color:rgba(196,154,60,.05);pointer-events:none;line-height:1;}
+.hero-inner{max-width:1160px;margin:0 auto;display:flex;align-items:center;gap:60px;width:100%;}
+.hero-text{flex:1;min-width:0;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;text-transform:uppercase;letter-spacing:3px;color:var(--gold2);margin-bottom:20px;}
+.hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--gold2);}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:58px;font-weight:700;color:var(--white);line-height:1.1;margin-bottom:20px;}
+.hero h1 em{color:var(--gold2);font-style:italic;}
+.hero p{font-size:16px;color:#9a8f82;line-height:1.7;margin-bottom:36px;max-width:480px;}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--white);padding:13px 24px;border-radius:6px;font-size:14px;font-weight:600;transition:all .2s;}
+.btn-primary:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 8px 20px rgba(196,154,60,.3);}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;border:1px solid #3a3228;color:#ccc;padding:13px 24px;border-radius:6px;font-size:14px;font-weight:500;transition:all .2s;}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold2);}
+.hero-stats{display:flex;gap:36px;margin-top:48px;padding-top:36px;border-top:1px solid #2a2318;flex-wrap:wrap;}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:700;color:var(--gold2);line-height:1;}
+.stat-label{font-size:11px;color:#6a5f54;text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;}
+.hero-visual{display:flex;gap:16px;align-items:flex-end;flex-shrink:0;}
+.hero-book{border-radius:6px;box-shadow:12px 12px 32px rgba(0,0,0,.5);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px 14px;color:white;transition:transform .3s;cursor:pointer;}
+.hero-book:hover{transform:translateY(-8px) rotate(-1deg) !important;}
+.hero-book .cross{font-size:22px;opacity:.6;margin-bottom:8px;}
+.hero-book .mini{font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:600;line-height:1.3;}
+.hb1{width:100px;height:150px;background:linear-gradient(160deg,#5a1f0f,#9b3d2b);transform:rotate(-3deg);}
+.hb2{width:110px;height:165px;background:linear-gradient(160deg,#1a3a5f,#2d6a9f);}
+.hb3{width:96px;height:144px;background:linear-gradient(160deg,#2d5a1f,#4a9b3d);transform:rotate(2deg);}
 
 /* STRIP */
-.strip { background: var(--gold); padding: 13px 0; overflow: hidden; max-width: 100vw; }
-.strip-track { display: flex; width: max-content; animation: marquee 22s linear infinite; }
-@keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
-.strip-track:hover { animation-play-state: paused; }
-.strip-item { display: flex; align-items: center; gap: 10px; padding: 0 36px; white-space: nowrap; color: var(--ink); font-size: 13px; font-weight: 600; }
-.strip-dot { width: 4px; height: 4px; background: var(--ink); border-radius: 50%; opacity: .3; }
+.strip{background:var(--gold);padding:13px 0;overflow:hidden;}
+.strip-track{display:flex;width:max-content;animation:marquee 22s linear infinite;}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.strip-track:hover{animation-play-state:paused;}
+.strip-item{display:flex;align-items:center;gap:10px;padding:0 36px;white-space:nowrap;color:var(--ink);font-size:13px;font-weight:600;}
+.strip-dot{width:4px;height:4px;background:var(--ink);border-radius:50%;opacity:.3;}
 
 /* SECTION */
-.section { padding: 72px 24px; }
-.section-inner { max-width: 1160px; margin: 0 auto; }
-.section-head { margin-bottom: 40px; }
-.eyebrow { font-size: 11px; text-transform: uppercase; letter-spacing: 3px; color: var(--gold); font-weight: 600; margin-bottom: 10px; }
-.section-head h2 { font-family: 'Cormorant Garamond', serif; font-size: 38px; font-weight: 700; color: var(--ink); line-height: 1.15; }
-.section-head p { color: var(--muted); font-size: 15px; margin-top: 8px; line-height: 1.6; }
+.section{padding:72px 24px;}
+.section-inner{max-width:1160px;margin:0 auto;}
+.section-head{margin-bottom:40px;}
+.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:3px;color:var(--gold);font-weight:600;margin-bottom:10px;}
+.section-head h2{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:700;color:var(--ink);line-height:1.15;}
+.section-head p{color:var(--muted);font-size:15px;margin-top:8px;line-height:1.6;}
 
 /* FILTERS */
-.filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px; }
-.filter-btn { padding: 7px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; border: 1.5px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all .2s; font-family: 'DM Sans', sans-serif; }
-.filter-btn:hover { border-color: var(--gold); color: var(--gold); }
-.filter-btn.active { background: var(--ink); border-color: var(--ink); color: var(--white); }
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px;}
+.filter-btn{padding:7px 16px;border-radius:20px;font-size:12px;font-weight:600;border:1.5px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif;}
+.filter-btn:hover{border-color:var(--gold);color:var(--gold);}
+.filter-btn.active{background:var(--ink);border-color:var(--ink);color:var(--white);}
 
 /* GRID */
-.books-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-.book-card { background: var(--white); border-radius: 12px; border: 1px solid var(--border); overflow: hidden; transition: all .3s; display: flex; flex-direction: column; animation: fadeUp .5s ease both; }
-.book-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(28,23,18,.13); border-color: var(--gold); }
-@keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
-.book-cover-wrap { height: 200px; display: flex; align-items: center; justify-content: center; background: var(--cream2); position: relative; overflow: hidden; }
-.bcp { width: 110px; height: 160px; border-radius: 5px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 16px 12px; text-align: center; color: white; box-shadow: 6px 8px 20px rgba(0,0,0,.25); transition: transform .3s; position: relative; }
-.bcp::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 7px; background: rgba(0,0,0,.2); border-radius: 5px 0 0 5px; }
-.book-card:hover .bcp { transform: rotate(-3deg) scale(1.06); }
-.bcp .cross { font-size: 18px; opacity: .6; margin-bottom: 8px; }
-.bcp .btitle { font-family: 'Cormorant Garamond', serif; font-size: 11px; font-weight: 600; line-height: 1.3; }
+.books-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.book-card{background:var(--white);border-radius:12px;border:1px solid var(--border);overflow:hidden;transition:all .3s;display:flex;flex-direction:column;animation:fadeUp .5s ease both;}
+.book-card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(28,23,18,.13);border-color:var(--gold);}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.book-cover-wrap{height:200px;display:flex;align-items:center;justify-content:center;background:var(--cream2);position:relative;overflow:hidden;}
+.bcp{width:110px;height:160px;border-radius:5px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px 12px;text-align:center;color:white;box-shadow:6px 8px 20px rgba(0,0,0,.25);transition:transform .3s;position:relative;}
+.bcp::before{content:'';position:absolute;left:0;top:0;bottom:0;width:7px;background:rgba(0,0,0,.2);border-radius:5px 0 0 5px;}
+.book-card:hover .bcp{transform:rotate(-3deg) scale(1.06);}
+.bcp .cross{font-size:18px;opacity:.6;margin-bottom:8px;}
+.bcp .btitle{font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:600;line-height:1.3;}
 .bc-0{background:linear-gradient(160deg,#5a1f0f,#9b3d2b)}
 .bc-1{background:linear-gradient(160deg,#4a1a5f,#7b3d9b)}
 .bc-2{background:linear-gradient(160deg,#1a3a5f,#2d6a9f)}
@@ -125,98 +117,117 @@ nav a:hover { background: var(--cream); color: var(--gold); }
 .bc-8{background:linear-gradient(160deg,#3a3a1a,#7b7b2d)}
 .bc-9{background:linear-gradient(160deg,#4a2d1a,#9b6b3d)}
 .bc-10{background:linear-gradient(160deg,#1f1a3a,#3d2d7b)}
-.badge-wrap { position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 4px; }
-.badge { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; }
-.b-promo { background: var(--rust); color: white; }
-.b-agotado { background: #555; color: white; }
-.b-poco { background: #c47a3c; color: white; }
-.book-body { padding: 16px; flex: 1; display: flex; flex-direction: column; }
-.book-cat { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); margin-bottom: 6px; }
-.book-title { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 700; color: var(--ink); line-height: 1.3; margin-bottom: 6px; flex: 1; }
-.book-sub { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
-.stock-info { font-size: 11px; color: var(--muted); margin-bottom: 12px; }
-.stock-low { color: #c47a3c; font-weight: 600; }
-.stock-out { color: #999; }
-.price-row { display: flex; align-items: baseline; gap: 8px; margin-bottom: 14px; }
-.p-original { font-size: 13px; color: var(--muted); text-decoration: line-through; }
-.p-final { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 700; color: var(--ink); }
-.p-promo { color: var(--rust); }
-.p-none { font-size: 13px; color: var(--muted); font-style: italic; }
-.book-actions { display: flex; gap: 8px; }
-.btn-mp { flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; background: #009ee3; color: white; border: none; border-radius: 6px; padding: 9px 8px; font-size: 11px; font-weight: 700; cursor: pointer; transition: all .2s; text-transform: uppercase; letter-spacing: .3px; font-family: 'DM Sans', sans-serif; }
-.btn-mp:hover:not(:disabled) { background: #0080c0; }
-.btn-mp:disabled { background: #c8c8c8; cursor: not-allowed; }
-.btn-mp svg { width: 13px; height: 13px; fill: white; flex-shrink: 0; }
-.btn-wa { flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; background: #25d366; color: white; border: none; border-radius: 6px; padding: 9px 8px; font-size: 11px; font-weight: 700; cursor: pointer; transition: all .2s; text-transform: uppercase; letter-spacing: .3px; font-family: 'DM Sans', sans-serif; }
-.btn-wa:hover:not([disabled]) { background: #1ebe5c; }
-.btn-wa[disabled] { background: #c8c8c8; cursor: not-allowed; pointer-events: none; }
-.btn-wa svg { width: 13px; height: 13px; fill: white; flex-shrink: 0; }
+.badge-wrap{position:absolute;top:10px;left:10px;display:flex;flex-direction:column;gap:4px;}
+.badge{display:inline-block;padding:3px 8px;border-radius:4px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;}
+.b-promo{background:var(--rust);color:white;}
+.b-agotado{background:#555;color:white;}
+.b-poco{background:#c47a3c;color:white;}
+.book-body{padding:16px;flex:1;display:flex;flex-direction:column;}
+.book-cat{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--gold);margin-bottom:6px;}
+.book-title{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:700;color:var(--ink);line-height:1.3;margin-bottom:6px;flex:1;}
+.book-sub{font-size:12px;color:var(--muted);margin-bottom:8px;}
+.stock-info{font-size:11px;color:var(--muted);margin-bottom:12px;}
+.stock-low{color:#c47a3c;font-weight:600;}
+.stock-out{color:#999;}
+.price-row{display:flex;align-items:baseline;gap:8px;margin-bottom:14px;}
+.p-original{font-size:13px;color:var(--muted);text-decoration:line-through;}
+.p-final{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--ink);}
+.p-promo{color:var(--rust);}
+.p-none{font-size:13px;color:var(--muted);font-style:italic;}
+.book-actions{display:flex;gap:8px;}
+.btn-mp{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;background:#009ee3;color:white;border:none;border-radius:6px;padding:9px 8px;font-size:11px;font-weight:700;cursor:pointer;transition:all .2s;text-transform:uppercase;letter-spacing:.3px;font-family:'DM Sans',sans-serif;}
+.btn-mp:hover:not(:disabled){background:#0080c0;}
+.btn-mp:disabled{background:#c8c8c8;cursor:not-allowed;}
+.btn-mp svg{width:13px;height:13px;fill:white;flex-shrink:0;}
+.btn-wa{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;background:#25d366;color:white;border:none;border-radius:6px;padding:9px 8px;font-size:11px;font-weight:700;cursor:pointer;transition:all .2s;text-transform:uppercase;letter-spacing:.3px;font-family:'DM Sans',sans-serif;}
+.btn-wa:hover{background:#1ebe5c;}
+.btn-wa.disabled{background:#c8c8c8;cursor:not-allowed;pointer-events:none;}
+.btn-wa svg{width:13px;height:13px;fill:white;flex-shrink:0;}
 
 /* ABOUT */
-.about-strip { background: var(--ink2); padding: 64px 24px; }
-.about-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-.about-text .eyebrow { color: var(--gold2); margin-bottom: 16px; display: block; }
-.about-text h2 { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 700; color: white; line-height: 1.2; margin-bottom: 16px; }
-.about-text p { color: #9a8f82; font-size: 15px; line-height: 1.8; margin-bottom: 12px; }
-.about-features { display: flex; flex-direction: column; gap: 16px; }
-.af { display: flex; gap: 16px; align-items: flex-start; padding: 16px; background: rgba(255,255,255,.04); border-radius: 8px; border: 1px solid rgba(255,255,255,.07); }
-.af-icon { width: 40px; height: 40px; background: rgba(196,154,60,.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 18px; }
-.af h4 { font-size: 14px; font-weight: 600; color: white; margin-bottom: 4px; }
-.af p { font-size: 13px; color: #6a5f54; line-height: 1.5; }
+.about-strip{background:var(--ink2);padding:64px 24px;}
+.about-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.about-text .eyebrow{color:var(--gold2);margin-bottom:16px;display:block;}
+.about-text h2{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:white;line-height:1.2;margin-bottom:16px;}
+.about-text p{color:#9a8f82;font-size:15px;line-height:1.8;margin-bottom:12px;}
+.about-features{display:flex;flex-direction:column;gap:16px;}
+.af{display:flex;gap:16px;align-items:flex-start;padding:16px;background:rgba(255,255,255,.04);border-radius:8px;border:1px solid rgba(255,255,255,.07);}
+.af-icon{width:40px;height:40px;background:rgba(196,154,60,.15);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;}
+.af h4{font-size:14px;font-weight:600;color:white;margin-bottom:4px;}
+.af p{font-size:13px;color:#6a5f54;line-height:1.5;}
 
 /* CONTACT */
-.contact-section { background: var(--cream2); padding: 64px 24px; text-align: center; }
-.contact-inner { max-width: 600px; margin: 0 auto; }
-.contact-inner .eyebrow { display: block; margin-bottom: 12px; }
-.contact-inner h2 { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 700; color: var(--ink); margin-bottom: 12px; }
-.contact-inner p { color: var(--muted); margin-bottom: 32px; font-size: 15px; line-height: 1.6; }
-.contact-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-.btn-wa-big { display: flex; align-items: center; gap: 10px; background: #25d366; color: white; padding: 14px 28px; border-radius: 8px; font-size: 14px; font-weight: 700; transition: all .2s; }
-.btn-wa-big:hover { background: #1ebe5c; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(37,211,102,.3); }
-.btn-wa-big svg { width: 20px; height: 20px; fill: white; }
-.btn-mail { display: flex; align-items: center; gap: 10px; background: var(--ink); color: white; padding: 14px 28px; border-radius: 8px; font-size: 14px; font-weight: 700; transition: all .2s; }
-.btn-mail:hover { background: var(--ink2); transform: translateY(-2px); }
-.btn-mail svg { width: 18px; height: 18px; fill: white; }
+.contact-section{background:var(--cream2);padding:64px 24px;text-align:center;}
+.contact-inner{max-width:600px;margin:0 auto;}
+.contact-inner .eyebrow{display:block;margin-bottom:12px;}
+.contact-inner h2{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:var(--ink);margin-bottom:12px;}
+.contact-inner p{color:var(--muted);margin-bottom:32px;font-size:15px;line-height:1.6;}
+.contact-buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.btn-wa-big{display:flex;align-items:center;gap:10px;background:#25d366;color:white;padding:14px 28px;border-radius:8px;font-size:14px;font-weight:700;transition:all .2s;}
+.btn-wa-big:hover{background:#1ebe5c;transform:translateY(-2px);box-shadow:0 8px 20px rgba(37,211,102,.3);}
+.btn-wa-big svg{width:20px;height:20px;fill:white;}
+.btn-mail{display:flex;align-items:center;gap:10px;background:var(--ink);color:white;padding:14px 28px;border-radius:8px;font-size:14px;font-weight:700;transition:all .2s;}
+.btn-mail:hover{background:var(--ink2);transform:translateY(-2px);}
+.btn-mail svg{width:18px;height:18px;fill:white;}
 
 /* FOOTER */
-footer { background: var(--ink); color: #6a5f54; padding: 48px 24px 24px; }
-.footer-inner { max-width: 1160px; margin: 0 auto; }
-.footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid #2a2318; }
-.fn { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: white; font-weight: 700; margin-bottom: 10px; }
-.footer-brand p { font-size: 13px; line-height: 1.7; }
-.footer-col h4 { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: #ccc; font-weight: 600; margin-bottom: 16px; }
-.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-.footer-col ul a { font-size: 13px; color: #6a5f54; transition: color .2s; }
-.footer-col ul a:hover { color: var(--gold2); }
-.ci { display: flex; flex-direction: column; gap: 10px; }
-.ci span { font-size: 13px; display: flex; align-items: flex-start; gap: 8px; }
-.ci svg { width: 14px; height: 14px; fill: var(--gold); flex-shrink: 0; margin-top: 2px; }
-.footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 12px; flex-wrap: wrap; gap: 8px; }
-.footer-bottom a { color: #4a3f34; transition: color .2s; }
-.footer-bottom a:hover { color: var(--gold2); }
+footer{background:var(--ink);color:#6a5f54;padding:48px 24px 24px;}
+.footer-inner{max-width:1160px;margin:0 auto;}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid #2a2318;}
+.fn{font-family:'Cormorant Garamond',serif;font-size:22px;color:white;font-weight:700;margin-bottom:10px;}
+.footer-brand p{font-size:13px;line-height:1.7;}
+.footer-col h4{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:#ccc;font-weight:600;margin-bottom:16px;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.footer-col ul a{font-size:13px;color:#6a5f54;transition:color .2s;}
+.footer-col ul a:hover{color:var(--gold2);}
+.ci{display:flex;flex-direction:column;gap:10px;}
+.ci span{font-size:13px;display:flex;align-items:flex-start;gap:8px;}
+.ci svg{width:14px;height:14px;fill:var(--gold);flex-shrink:0;margin-top:2px;}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;font-size:12px;flex-wrap:wrap;gap:8px;}
+.footer-bottom a{color:#4a3f34;transition:color .2s;}
+.footer-bottom a:hover{color:var(--gold2);}
 
 /* COOKIE */
-.cookie { position: fixed; bottom: 0; left: 0; right: 0; background: var(--ink); color: #ccc; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; z-index: 999; font-size: 13px; transition: transform .4s; flex-wrap: wrap; }
-.cookie.hidden { transform: translateY(100%); }
-.cookie button { background: var(--gold); color: var(--ink); border: none; padding: 8px 20px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 12px; white-space: nowrap; font-family: 'DM Sans', sans-serif; }
+.cookie{position:fixed;bottom:0;left:0;right:0;background:var(--ink);color:#ccc;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;z-index:999;font-size:13px;transition:transform .4s;flex-wrap:wrap;}
+.cookie.hidden{transform:translateY(100%);}
+.cookie button{background:var(--gold);color:var(--ink);border:none;padding:8px 20px;border-radius:6px;font-weight:700;cursor:pointer;font-size:12px;white-space:nowrap;font-family:'DM Sans',sans-serif;}
 
 /* RESPONSIVE */
-@media (max-width: 1024px) { .books-grid { grid-template-columns: repeat(3,1fr); } .hero-visual { display: none; } }
-@media (max-width: 768px) { .books-grid { grid-template-columns: repeat(2,1fr); } nav { display: none; } .hamburger { display: flex; } .hero h1 { font-size: 40px; } .hero { padding: 48px 24px 56px; } .about-inner { grid-template-columns: 1fr; gap: 40px; } .footer-top { grid-template-columns: 1fr; gap: 32px; } .hero-text { width: 100%; min-width: 0; } .hero p { max-width: 100%; } }
-@media (max-width: 500px) { .books-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 32px; } .hero-stats { flex-wrap: wrap; gap: 16px; } .book-actions { flex-direction: column; } .topbar-left { display: none; } }
+@media(max-width:1024px){.books-grid{grid-template-columns:repeat(3,1fr);}.hero-visual{display:none;}}
+@media(max-width:768px){
+  .books-grid{grid-template-columns:repeat(2,1fr);}
+  nav{display:none;}
+  .hamburger{display:flex;}
+  .hero h1{font-size:40px;}
+  .hero{padding:48px 24px 56px;}
+  .about-inner{grid-template-columns:1fr;gap:40px;}
+  .footer-top{grid-template-columns:1fr;gap:32px;}
+  .hero-text{width:100%;min-width:0;}
+  .hero p{max-width:100%;}
+  .btn-wa-header span{display:none;}
+}
+@media(max-width:500px){
+  .books-grid{grid-template-columns:1fr;}
+  .hero h1{font-size:32px;}
+  .hero-stats{flex-wrap:wrap;gap:16px;}
+  .book-actions{flex-direction:column;}
+  .topbar-left{display:none;}
+  .logo-sub{display:none;}
+}
 </style>
 </head>
 <body>
 
+<!-- TOPBAR -->
 <div class="topbar">
   <div class="topbar-left">
     <a href="https://wa.me/5491165454453" target="_blank">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       1165454453
     </a>
-    <a href="mailto:editorial@delibroscristianos.com.ar">
+    <a href="https://mail.google.com/mail/?view=cm&to=delibroscristianos&#64;gmail.com" target="_blank">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="#c49a3c"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-      delibroscristianos@gmail.com
+      delibroscristianos&#64;gmail.com
     </a>
   </div>
   <div class="topbar-right">
@@ -225,10 +236,11 @@ footer { background: var(--ink); color: #6a5f54; padding: 48px 24px 24px; }
   </div>
 </div>
 
+<!-- HEADER -->
 <header>
   <div class="header-inner">
     <a href="#" class="logo">
-      <div class="logo-icon">✝</div>
+      <div class="logo-icon">&#10013;</div>
       <div>
         <div class="logo-name">delibroscristianos</div>
         <div class="logo-sub">Editorial Argentina</div>
@@ -241,11 +253,13 @@ footer { background: var(--ink); color: #6a5f54; padding: 48px 24px 24px; }
       <a href="#contacto">Contacto</a>
     </nav>
     <div class="header-right">
-      <a href="https://wa.me/5491165454453?text=Hola! Quiero consultar sobre los libros" class="btn-wa-header" target="_blank">
+      <a href="https://wa.me/5491165454453?text=Hola!%20Quiero%20consultar%20sobre%20los%20libros" class="btn-wa-header" target="_blank">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        WhatsApp
+        <span>WhatsApp</span>
       </a>
-      <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
   <div class="mobile-nav" id="mobileNav">
@@ -256,6 +270,7 @@ footer { background: var(--ink); color: #6a5f54; padding: 48px 24px 24px; }
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-text">
@@ -264,37 +279,39 @@ footer { background: var(--ink); color: #6a5f54; padding: 48px 24px 24px; }
       <p>Somos una editorial dedicada a llevar libros de fe, valores y espiritualidad cristiana a cada hogar del país. Enviamos a todo Argentina.</p>
       <div class="hero-ctas">
         <a href="#catalogo" class="btn-primary">Ver catálogo completo</a>
-        <a href="https://wa.me/5491165454453?text=Hola! Quiero consultar sobre los libros" class="btn-outline" target="_blank">Consultar por WhatsApp</a>
+        <a href="https://wa.me/5491165454453?text=Hola!%20Quiero%20consultar%20sobre%20los%20libros" class="btn-outline" target="_blank">Consultar por WhatsApp</a>
       </div>
       <div class="hero-stats">
         <div><div class="stat-num">11</div><div class="stat-label">Títulos</div></div>
         <div><div class="stat-num">5+</div><div class="stat-label">Años</div></div>
-        <div><div class="stat-num">🇦🇷</div><div class="stat-label">Todo el país</div></div>
+        <div><div class="stat-num">&#127464;&#127479;</div><div class="stat-label">Todo el país</div></div>
       </div>
     </div>
     <div class="hero-visual">
-      <div class="hero-book hb1"><div class="cross">✝</div><div class="mini">Stephanie y el camino invisible</div></div>
-      <div class="hero-book hb2"><div class="cross">✝</div><div class="mini">Devocional Mantequilla y Miel</div></div>
-      <div class="hero-book hb3"><div class="cross">✝</div><div class="mini">Sucedió en Navidad</div></div>
+      <div class="hero-book hb1"><div class="cross">&#10013;</div><div class="mini">Stephanie y el camino invisible</div></div>
+      <div class="hero-book hb2"><div class="cross">&#10013;</div><div class="mini">Devocional Mantequilla y Miel</div></div>
+      <div class="hero-book hb3"><div class="cross">&#10013;</div><div class="mini">Sucedió en Navidad</div></div>
     </div>
   </div>
 </section>
 
+<!-- STRIP -->
 <div class="strip">
   <div class="strip-track">
-    <span class="strip-item">📦 Envíos a todo Argentina</span><span class="strip-dot"></span>
-    <span class="strip-item">💳 Mercado Pago</span><span class="strip-dot"></span>
-    <span class="strip-item">💬 Atención por WhatsApp</span><span class="strip-dot"></span>
-    <span class="strip-item">📚 11 títulos disponibles</span><span class="strip-dot"></span>
-    <span class="strip-item">✝ Editorial Cristiana Argentina</span><span class="strip-dot"></span>
-    <span class="strip-item">📦 Envíos a todo Argentina</span><span class="strip-dot"></span>
-    <span class="strip-item">💳 Mercado Pago</span><span class="strip-dot"></span>
-    <span class="strip-item">💬 Atención por WhatsApp</span><span class="strip-dot"></span>
-    <span class="strip-item">📚 11 títulos disponibles</span><span class="strip-dot"></span>
-    <span class="strip-item">✝ Editorial Cristiana Argentina</span><span class="strip-dot"></span>
+    <span class="strip-item">&#128230; Envíos a todo Argentina</span><span class="strip-dot"></span>
+    <span class="strip-item">&#128179; Mercado Pago</span><span class="strip-dot"></span>
+    <span class="strip-item">&#128172; Atención por WhatsApp</span><span class="strip-dot"></span>
+    <span class="strip-item">&#128218; 11 títulos disponibles</span><span class="strip-dot"></span>
+    <span class="strip-item">&#10013; Editorial Cristiana Argentina</span><span class="strip-dot"></span>
+    <span class="strip-item">&#128230; Envíos a todo Argentina</span><span class="strip-dot"></span>
+    <span class="strip-item">&#128179; Mercado Pago</span><span class="strip-dot"></span>
+    <span class="strip-item">&#128172; Atención por WhatsApp</span><span class="strip-dot"></span>
+    <span class="strip-item">&#128218; 11 títulos disponibles</span><span class="strip-dot"></span>
+    <span class="strip-item">&#10013; Editorial Cristiana Argentina</span><span class="strip-dot"></span>
   </div>
 </div>
 
+<!-- CATALOGO -->
 <section class="section" id="catalogo">
   <div class="section-inner">
     <div class="section-head">
@@ -314,6 +331,7 @@ footer { background: var(--ink); color: #6a5f54; padding: 48px 24px 24px; }
   </div>
 </section>
 
+<!-- NOSOTROS -->
 <section class="about-strip" id="nosotros">
   <div class="about-inner">
     <div class="about-text">
@@ -323,24 +341,25 @@ footer { background: var(--ink); color: #6a5f54; padding: 48px 24px 24px; }
       <p>Cada título que publicamos pasa por un proceso cuidadoso de edición para garantizar calidad literaria y fidelidad espiritual.</p>
     </div>
     <div class="about-features">
-      <div class="af"><div class="af-icon">📦</div><div><h4>Enviamos a todo el país</h4><p>Correo Argentino y Andreani. Coordinamos el envío por WhatsApp una vez confirmado el pago.</p></div></div>
-      <div class="af"><div class="af-icon">💳</div><div><h4>Pagás con Mercado Pago</h4><p>Tarjetas de crédito, débito, transferencia o efectivo en puntos de pago. Seguro y sin sorpresas.</p></div></div>
-      <div class="af"><div class="af-icon">💬</div><div><h4>Atención personalizada</h4><p>Respondemos por WhatsApp. Podés consultar antes de comprar o pedir recomendaciones.</p></div></div>
+      <div class="af"><div class="af-icon">&#128230;</div><div><h4>Enviamos a todo el país</h4><p>Correo Argentino y Andreani. Coordinamos el envío por WhatsApp una vez confirmado el pago.</p></div></div>
+      <div class="af"><div class="af-icon">&#128179;</div><div><h4>Pagás con Mercado Pago</h4><p>Tarjetas de crédito, débito, transferencia o efectivo en puntos de pago. Seguro y sin sorpresas.</p></div></div>
+      <div class="af"><div class="af-icon">&#128172;</div><div><h4>Atención personalizada</h4><p>Respondemos por WhatsApp. Podés consultar antes de comprar o pedir recomendaciones.</p></div></div>
     </div>
   </div>
 </section>
 
+<!-- CONTACTO -->
 <section class="contact-section" id="contacto">
   <div class="contact-inner">
     <span class="eyebrow">Contacto</span>
     <h2>¿Tenés alguna consulta?</h2>
     <p>Escribinos por WhatsApp o mandanos un mail. Respondemos a la brevedad de lunes a sábado.</p>
     <div class="contact-buttons">
-      <a href="https://wa.me/5491165454453?text=Hola! Quiero consultar sobre los libros" class="btn-wa-big" target="_blank">
+      <a href="https://wa.me/5491165454453?text=Hola!%20Quiero%20consultar%20sobre%20los%20libros" class="btn-wa-big" target="_blank">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         Escribir por WhatsApp
       </a>
-      <a href="mailto:editorial@delibroscristianos.com.ar" class="btn-mail">
+      <a href="https://mail.google.com/mail/?view=cm&to=delibroscristianos&#64;gmail.com" class="btn-mail" target="_blank">
         <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
         Enviar un mail
       </a>
@@ -348,11 +367,12 @@ footer { background: var(--ink); color: #6a5f54; padding: 48px 24px 24px; }
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <div class="fn">✝ delibroscristianos</div>
+        <div class="fn">&#10013; delibroscristianos</div>
         <p>Editorial argentina especializada en libros de fe, valores y espiritualidad cristiana. Llevamos la Palabra a cada rincón del país.</p>
       </div>
       <div class="footer-col">
@@ -367,107 +387,137 @@ footer { background: var(--ink); color: #6a5f54; padding: 48px 24px 24px; }
       <div class="footer-col">
         <h4>Contacto</h4>
         <div class="ci">
-          <span><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>1165454453</span>
-          <span><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>delibroscristianos@gmail.com</span>
-          <span><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Envíos a todo Argentina</span>
+          <span>
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            1165454453
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            delibroscristianos&#64;gmail.com
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Envíos a todo Argentina
+          </span>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 delibroscristianos — Todos los derechos reservados.</span>
+      <span>&#169; 2026 delibroscristianos &#8212; Todos los derechos reservados.</span>
       <a href="https://www.argentina.gob.ar/produccion/defensadelconsumidor/formulario" target="_blank">Defensa del consumidor</a>
     </div>
   </div>
 </footer>
 
+<!-- COOKIE -->
 <div class="cookie" id="cookie">
   <span>Este sitio usa cookies para mejorar tu experiencia de navegación.</span>
   <button onclick="document.getElementById('cookie').classList.add('hidden')">Entendido</button>
 </div>
 
 <script>
-const PHONE = '5491165454453';
+var PHONE = '5491165454453';
 
-const books = [
-  { id:0,  title:'Stephanie y el camino invisible de Dios', sub:null,                         cat:'novela',   price:34000, promo:null,  stock:10,  color:'bc-0',  mpLink:'#' },
-  { id:1,  title:'Estas Princesas darán que hablar',        sub:'Tapa Flexible',              cat:'infantil', price:23000, promo:20000, stock:100, color:'bc-1',  mpLink:'#' },
-  { id:2,  title:'Sofie of Sangendrup',                     sub:'English / Inglés',           cat:'novela',   price:45000, promo:null,  stock:0,   color:'bc-2',  mpLink:'#' },
-  { id:3,  title:'Fundamentos para conocer a Dios',         sub:null,                         cat:'cristiano',price:20000, promo:15000, stock:15,  color:'bc-3',  mpLink:'#' },
-  { id:4,  title:'Sucedió en Navidad',                      sub:'Incluye recetas de cocina',  cat:'novela',   price:16000, promo:12000, stock:20,  color:'bc-4',  mpLink:'#' },
-  { id:5,  title:'La ratita Rita',                          sub:null,                         cat:'infantil', price:22000, promo:null,  stock:50,  color:'bc-5',  mpLink:'#' },
-  { id:6,  title:'Eres Padre, Eres Hijo',                   sub:null,                         cat:'cristiano',price:20000, promo:15000, stock:20,  color:'bc-6',  mpLink:'#' },
-  { id:7,  title:'Dormo, el Huérfano, los Gigantes y otras historias', sub:null,              cat:'novela',   price:16000, promo:14000, stock:30,  color:'bc-7',  mpLink:'#' },
-  { id:8,  title:'Cuentan que en Navidad',                  sub:null,                         cat:'novela',   price:null,  promo:null,  stock:0,   color:'bc-8',  mpLink:'#' },
-  { id:9,  title:'Devocional Mantequilla y Miel',           sub:null,                         cat:'cristiano',price:25000, promo:20000, stock:50,  color:'bc-9',  mpLink:'#' },
-  { id:10, title:'Novela Sofie de Sangendrup',              sub:'Español',                    cat:'novela',   price:28000, promo:23000, stock:40,  color:'bc-10', mpLink:'#' }
+var books = [
+  { id:0,  title:'Stephanie y el camino invisible de Dios', sub:null,                        cat:'novela',    price:34000, promo:null,  stock:10,  color:'bc-0',  mpLink:'#' },
+  { id:1,  title:'Estas Princesas daran que hablar',        sub:'Tapa Flexible',             cat:'infantil',  price:23000, promo:20000, stock:100, color:'bc-1',  mpLink:'#' },
+  { id:2,  title:'Sofie of Sangendrup',                     sub:'English / Ingles',          cat:'novela',    price:45000, promo:null,  stock:0,   color:'bc-2',  mpLink:'#' },
+  { id:3,  title:'Fundamentos para conocer a Dios',         sub:null,                        cat:'cristiano', price:20000, promo:15000, stock:15,  color:'bc-3',  mpLink:'#' },
+  { id:4,  title:'Sucedio en Navidad',                      sub:'Incluye recetas de cocina', cat:'novela',    price:16000, promo:12000, stock:20,  color:'bc-4',  mpLink:'#' },
+  { id:5,  title:'La ratita Rita',                          sub:null,                        cat:'infantil',  price:22000, promo:null,  stock:50,  color:'bc-5',  mpLink:'#' },
+  { id:6,  title:'Eres Padre, Eres Hijo',                   sub:null,                        cat:'cristiano', price:20000, promo:15000, stock:20,  color:'bc-6',  mpLink:'#' },
+  { id:7,  title:'Dormo, el Huerfano, los Gigantes y otras historias', sub:null,             cat:'novela',    price:16000, promo:14000, stock:30,  color:'bc-7',  mpLink:'#' },
+  { id:8,  title:'Cuentan que en Navidad',                  sub:null,                        cat:'novela',    price:null,  promo:null,  stock:0,   color:'bc-8',  mpLink:'#' },
+  { id:9,  title:'Devocional Mantequilla y Miel',           sub:null,                        cat:'cristiano', price:25000, promo:20000, stock:50,  color:'bc-9',  mpLink:'#' },
+  { id:10, title:'Novela Sofie de Sangendrup',              sub:'Espanol',                   cat:'novela',    price:28000, promo:23000, stock:40,  color:'bc-10', mpLink:'#' }
 ];
 
-const catLabel = { novela:'Novela', infantil:'Infantil', cristiano:'Vida Cristiana' };
+var catLabel = { novela:'Novela', infantil:'Infantil', cristiano:'Vida Cristiana' };
 
-function fmt(n) { return '$' + n.toLocaleString('es-AR'); }
+function fmt(n) {
+  return '$' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+}
 
-function card(b, delay) {
-  const avail = b.stock > 0 && b.price !== null;
-  const price = b.promo || b.price;
-  const waMsg = encodeURIComponent(`Hola! Quiero comprar "${b.title}"${b.sub?' ('+b.sub+')':''}. ¿Está disponible?`);
-  const waLink = `https://wa.me/${PHONE}?text=${waMsg}`;
+function buildCard(b, delay) {
+  var avail = b.stock > 0 && b.price !== null;
+  var price = b.promo || b.price;
+  var waMsg = encodeURIComponent('Hola! Quiero comprar "' + b.title + '"' + (b.sub ? ' (' + b.sub + ')' : '') + '. Esta disponible?');
+  var waLink = 'https://wa.me/' + PHONE + '?text=' + waMsg;
 
-  let badges = '';
+  var badges = '';
   if (b.stock === 0) badges += '<span class="badge b-agotado">Sin stock</span>';
   if (b.promo && avail) badges += '<span class="badge b-promo">Oferta</span>';
-  if (b.stock > 0 && b.stock <= 10) badges += '<span class="badge b-poco">¡Últimos!</span>';
+  if (b.stock > 0 && b.stock <= 10) badges += '<span class="badge b-poco">Ultimos!</span>';
 
-  let stockTxt = '';
-  let stockCls = '';
+  var stockTxt = 'Stock disponible';
+  var stockCls = '';
   if (b.stock === 0) { stockTxt = 'Sin stock'; stockCls = 'stock-out'; }
-  else if (b.stock <= 15) { stockTxt = `Últimas ${b.stock} unidades`; stockCls = 'stock-low'; }
-  else { stockTxt = 'Stock disponible'; }
+  else if (b.stock <= 15) { stockTxt = 'Ultimas ' + b.stock + ' unidades'; stockCls = 'stock-low'; }
 
-  let priceHtml = '';
+  var priceHtml = '';
   if (b.price === null) {
-    priceHtml = '<span class="p-none">Próximamente</span>';
+    priceHtml = '<span class="p-none">Proximamente</span>';
   } else {
-    priceHtml = (b.promo ? `<span class="p-original">${fmt(b.price)}</span>` : '') +
-                `<span class="p-final ${b.promo?'p-promo':''}">${fmt(price)}</span>`;
+    priceHtml = (b.promo ? '<span class="p-original">' + fmt(b.price) + '</span>' : '') +
+                '<span class="p-final ' + (b.promo ? 'p-promo' : '') + '">' + fmt(price) + '</span>';
   }
 
-  return `
-    <div class="book-card" data-cat="${b.cat}" data-promo="${!!b.promo}" data-stock="${b.stock}" style="animation-delay:${delay}ms">
-      <div class="book-cover-wrap">
-        <div class="bcp ${b.color}">
-          <div class="cross">✝</div>
-          <div class="btitle">${b.title}</div>
-        </div>
-        <div class="badge-wrap">${badges}</div>
-      </div>
-      <div class="book-body">
-        <div class="book-cat">${catLabel[b.cat]||b.cat}</div>
-        <div class="book-title">${b.title}</div>
-        ${b.sub ? `<div class="book-sub">${b.sub}</div>` : ''}
-        <div class="stock-info ${stockCls}">${stockTxt}</div>
-        <div class="price-row">${priceHtml}</div>
-        <div class="book-actions">
-          <button class="btn-mp" ${!avail?'disabled':''} onclick="buyMP('${b.mpLink}','${b.title.replace(/'/g,"\\'")}')">
-            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
-            ${avail ? 'Mercado Pago' : 'Sin stock'}
-          </button>
-          <a class="btn-wa" href="${waLink}" target="_blank" ${!avail?'disabled':''}>
-            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            WhatsApp
-          </a>
-        </div>
-      </div>
-    </div>`;
+  var mpBtn = '<button class="btn-mp"' + (!avail ? ' disabled' : '') + ' onclick="buyMP(\'' + b.mpLink + '\',\'' + b.title.replace(/'/g,"\\'") + '\')">' +
+    '<svg viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>' +
+    (avail ? 'Mercado Pago' : 'Sin stock') + '</button>';
+
+  var waBtn = '<a class="btn-wa' + (!avail ? ' disabled' : '') + '" href="' + (avail ? waLink : '#') + '" ' + (avail ? 'target="_blank"' : '') + '>' +
+    '<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>' +
+    'WhatsApp</a>';
+
+  return '<div class="book-card" style="animation-delay:' + delay + 'ms">' +
+    '<div class="book-cover-wrap">' +
+      '<div class="bcp ' + b.color + '"><div class="cross">&#10013;</div><div class="btitle">' + b.title + '</div></div>' +
+      '<div class="badge-wrap">' + badges + '</div>' +
+    '</div>' +
+    '<div class="book-body">' +
+      '<div class="book-cat">' + (catLabel[b.cat] || b.cat) + '</div>' +
+      '<div class="book-title">' + b.title + '</div>' +
+      (b.sub ? '<div class="book-sub">' + b.sub + '</div>' : '') +
+      '<div class="stock-info ' + stockCls + '">' + stockTxt + '</div>' +
+      '<div class="price-row">' + priceHtml + '</div>' +
+      '<div class="book-actions">' + mpBtn + waBtn + '</div>' +
+    '</div></div>';
 }
 
 function render(list) {
-  document.getElementById('booksGrid').innerHTML = list.map((b,i) => card(b, i*60)).join('');
+  var html = '';
+  for (var i = 0; i < list.length; i++) {
+    html += buildCard(list[i], i * 60);
+  }
+  document.getElementById('booksGrid').innerHTML = html;
 }
 
 function filterBooks(f, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  var btns = document.querySelectorAll('.filter-btn');
+  for (var i = 0; i < btns.length; i++) btns[i].classList.remove('active');
   btn.classList.add('active');
-  let list = books;
-  if (f === 'promo') list = books.filter(b => b.promo);
-  else if (f === 'stock') list = books.filter(b => b.stock > 0);
-  else if (f !== 'todos') list = books
+  var list = books;
+  if (f === 'promo') list = books.filter(function(b){ return b.promo; });
+  else if (f === 'stock') list = books.filter(function(b){ return b.stock > 0; });
+  else if (f !== 'todos') list = books.filter(function(b){ return b.cat === f; });
+  render(list);
+}
+
+function buyMP(link, title) {
+  if (link === '#') {
+    var msg = encodeURIComponent('Hola! Quiero comprar "' + title + '" con Mercado Pago. Me podes pasar el link de pago?');
+    window.open('https://wa.me/' + PHONE + '?text=' + msg, '_blank');
+  } else {
+    window.open(link, '_blank');
+  }
+}
+
+function toggleMenu() {
+  document.getElementById('mobileNav').classList.toggle('open');
+}
+
+render(books);
+</script>
+</body>
+</html>
