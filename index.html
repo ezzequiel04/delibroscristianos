@@ -78,11 +78,11 @@ nav a:hover{background:var(--cream);color:var(--gold);}
 .filter-btn.active{background:var(--ink);border-color:var(--ink);color:var(--white);}
 
 /* GRID */
-.books-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
-.book-card{background:var(--white);border-radius:12px;border:1px solid var(--border);overflow:hidden;transition:all .3s;display:flex;flex-direction:column;animation:fadeUp .5s ease both;}
+.books-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+.book-card{background:var(--white);border-radius:12px;border:1px solid var(--border);overflow:hidden;transition:all .3s;display:flex;flex-direction:row;animation:fadeUp .5s ease both;}
 .book-card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(28,23,18,.13);border-color:var(--gold);}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-.book-cover-wrap{height:220px;display:flex;align-items:center;justify-content:center;background:var(--cream2);position:relative;overflow:hidden;}
+.book-cover-wrap{width:158px;min-width:158px;height:auto;display:flex;align-items:center;justify-content:center;background:var(--cream2);position:relative;overflow:hidden;}
 .book-cover-wrap img{height:100%;width:100%;object-fit:cover;transition:transform .3s;}
 .book-card:hover .book-cover-wrap img{transform:scale(1.05);}
 .bcp{width:110px;height:160px;border-radius:5px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px 12px;text-align:center;color:white;box-shadow:6px 8px 20px rgba(0,0,0,.25);transition:transform .3s;position:relative;}
@@ -444,8 +444,7 @@ function buildCard(b, delay) {
 
   return '<div class="book-card" style="animation-delay:' + delay + 'ms">' +
     '<div class="book-cover-wrap">' +
-      '<img src="' + b.img + '" alt="' + b.title + '" onerror="this.parentNode.innerHTML=\'<div class=\\\"bcp ' + b.color + '\\\"><div class=\\\"cross\\\">&#10013;</div><div class=\\\"btitle\\\">' + b.title.replace(/'/g,"\\'") + '</div></div>\'">' +
-      '<div class="badge-wrap">' + badges + '</div>' +
+    '<img src="' + b.img + '" alt="' + b.title + '" style="height:100%;width:100%;object-fit:cover;" onerror="this.style.display=\'none\'">' + '<div class="badge-wrap">' + badges + '</div>' +
     '</div>' +
     '<div class="book-body">' +
       '<div class="book-cat">' + (catLabel[b.cat] || b.cat) + '</div>' +
