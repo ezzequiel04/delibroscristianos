@@ -49,7 +49,7 @@ nav a:hover{background:var(--cream);color:var(--gold);}
 .btn-primary:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 8px 20px rgba(196,154,60,.3);}
 .btn-outline{display:inline-flex;align-items:center;gap:8px;border:1px solid #3a3228;color:#ccc;padding:13px 24px;border-radius:6px;font-size:14px;font-weight:500;transition:all .2s;}
 .btn-outline:hover{border-color:var(--gold);color:var(--gold2);}
-.hero-stats{display:flex;gap:36px;margin-top:48px;padding-top:36px;flex-wrap:wrap;}
+.hero-stats{display:flex;gap:36px;margin-top:24px;padding-top:0;flex-wrap:wrap;}
 .stat-num{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:700;color:var(--gold2);line-height:1;}
 .stat-label{font-size:11px;color:#6a5f54;text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;}
 @keyframes floatLogo{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
@@ -113,29 +113,28 @@ nav a:hover{background:var(--cream);color:var(--gold);}
 .stock-info{font-size:11px;color:var(--muted);margin-bottom:12px;}
 .stock-low{color:#c47a3c;font-weight:600;}
 .stock-out{color:#999;}
-.price-row{display:flex;align-items:baseline;gap:8px;margin-bottom:14px;}
+.price-row{display:flex;align-items:baseline;gap:8px;margin-bottom:12px;}
 .p-original{font-size:13px;color:var(--muted);text-decoration:line-through;}
 .p-final{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--ink);}
 .p-promo{color:var(--rust);}
 .p-none{font-size:13px;color:var(--muted);font-style:italic;}
-.book-actions{display:flex;gap:5px;flex-wrap:wrap;}
-.btn-mp,.btn-wa,.btn-ml,.btn-amz{flex:1 1 calc(50% - 3px);display:flex;align-items:center;justify-content:center;gap:4px;border:none;border-radius:6px;padding:8px 4px;font-size:10px;font-weight:700;cursor:pointer;transition:all .2s;text-transform:uppercase;letter-spacing:.2px;font-family:'DM Sans',sans-serif;min-width:0;}
-.btn-mp{background:#009ee3;color:white;}
-.btn-mp:hover:not(:disabled){background:#0080c0;}
-.btn-mp:disabled{background:#c8c8c8;cursor:not-allowed;}
-.btn-mp svg{width:11px;height:11px;fill:white;flex-shrink:0;}
-.btn-wa{background:#25d366;color:white;}
-.btn-wa:hover{background:#1ebe5c;}
-.btn-wa.disabled{background:#c8c8c8;cursor:not-allowed;pointer-events:none;}
-.btn-wa svg{width:11px;height:11px;fill:white;flex-shrink:0;}
+
+/* BOTONES */
+.book-actions{display:flex;flex-direction:column;gap:6px;}
+.btns-top{display:flex;gap:6px;}
+.btn-ml,.btn-amz{flex:1;display:flex;align-items:center;justify-content:center;gap:4px;border:none;border-radius:6px;padding:8px 4px;font-size:10px;font-weight:700;cursor:pointer;transition:all .2s;text-transform:uppercase;letter-spacing:.2px;font-family:'DM Sans',sans-serif;min-width:0;}
 .btn-ml{background:#ffe600;color:#333;}
 .btn-ml:hover:not(:disabled){background:#f0d800;}
 .btn-ml:disabled{background:#c8c8c8;color:white;cursor:not-allowed;}
 .btn-amz{background:#ff9900;color:#111;}
 .btn-amz:hover:not(:disabled){background:#e68a00;}
 .btn-amz:disabled{background:#c8c8c8;color:white;cursor:not-allowed;}
-.btn-wa.disabled{background:#c8c8c8;cursor:not-allowed;pointer-events:none;}
-.btn-wa svg{width:13px;height:13px;fill:white;flex-shrink:0;}
+.btn-wa-book{width:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2px;background:#25d366;color:white;border:none;border-radius:6px;padding:9px 8px;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif;}
+.btn-wa-book:hover{background:#1ebe5c;}
+.btn-wa-book.disabled{background:#c8c8c8;cursor:not-allowed;pointer-events:none;}
+.btn-wa-book .wa-main{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.2px;display:flex;align-items:center;gap:5px;}
+.btn-wa-book .wa-main svg{width:11px;height:11px;fill:white;flex-shrink:0;}
+.btn-wa-book .wa-sub{font-size:9px;opacity:.85;font-weight:500;}
 
 /* ABOUT */
 .about-strip{background:var(--ink2);padding:64px 24px;}
@@ -186,9 +185,9 @@ footer{background:var(--ink);color:#6a5f54;padding:48px 24px 24px;}
 .cookie button{background:var(--gold);color:var(--ink);border:none;padding:8px 20px;border-radius:6px;font-weight:700;cursor:pointer;font-size:12px;white-space:nowrap;font-family:'DM Sans',sans-serif;}
 
 /* RESPONSIVE */
-@media(max-width:1024px){.books-grid{grid-template-columns:repeat(3,1fr);}.hero-visual{display:none;}}
+@media(max-width:1024px){.books-grid{grid-template-columns:repeat(2,1fr);}.hero-visual{display:none;}}
 @media(max-width:768px){
-  .books-grid{grid-template-columns:repeat(2,1fr);}
+  .books-grid{grid-template-columns:1fr;}
   nav{display:none;}
   .hamburger{display:flex;}
   .hero h1{font-size:40px;}
@@ -199,11 +198,8 @@ footer{background:var(--ink);color:#6a5f54;padding:48px 24px 24px;}
   .hero p{max-width:100%;}
 }
 @media(max-width:500px){
-  .books-grid{grid-template-columns:1fr;}
   .hero h1{font-size:32px;}
   .hero-stats{flex-wrap:wrap;gap:16px;}
-  .book-actions{flex-direction:column;}
-  .topbar-left{display:none;}
   .logo-sub{display:none;}
 }
 </style>
@@ -222,7 +218,7 @@ footer{background:var(--ink);color:#6a5f54;padding:48px 24px 24px;}
     </a>
     <nav>
       <a href="#">Inicio</a>
-      <a href="#catalogo">Catálogo</a>
+      <a href="#catalogo">Catalogo</a>
       <a href="#nosotros">Nosotros</a>
       <a href="#contacto">Contacto</a>
     </nav>
@@ -232,7 +228,7 @@ footer{background:var(--ink);color:#6a5f54;padding:48px 24px 24px;}
   </div>
   <div class="mobile-nav" id="mobileNav">
     <a href="#" onclick="toggleMenu()">Inicio</a>
-    <a href="#catalogo" onclick="toggleMenu()">Catálogo</a>
+    <a href="#catalogo" onclick="toggleMenu()">Catalogo</a>
     <a href="#nosotros" onclick="toggleMenu()">Nosotros</a>
     <a href="#contacto" onclick="toggleMenu()">Contacto</a>
   </div>
@@ -244,15 +240,15 @@ footer{background:var(--ink);color:#6a5f54;padding:48px 24px 24px;}
     <div class="hero-text">
       <div class="hero-eyebrow">Editorial Cristiana Argentina</div>
       <h1>Libros que <em>nutren</em><br>el alma</h1>
-      <p>Somos una editorial dedicada a llevar libros de fe, valores y espiritualidad cristiana a cada hogar del país. Enviamos a todo Argentina.</p>
+      <p>Somos una editorial dedicada a llevar libros de fe, valores y espiritualidad cristiana a cada hogar del pais. Enviamos a todo Argentina.</p>
       <div class="hero-ctas">
-        <a href="#catalogo" class="btn-primary">Ver catálogo completo</a>
+        <a href="#catalogo" class="btn-primary">Ver catalogo completo</a>
         <a href="https://wa.me/5491165454453?text=Hola!%20Quiero%20consultar%20sobre%20los%20libros" class="btn-outline" target="_blank">Consultar por WhatsApp</a>
       </div>
       <div class="hero-stats">
-        <div><div class="stat-num">12</div><div class="stat-label">Títulos</div></div>
-        <div><div class="stat-num">5+</div><div class="stat-label">Años</div></div>
-        <div><div class="stat-num">&#127462;&#127479;</div><div class="stat-label">Todo el país</div></div>
+        <div><div class="stat-num">12</div><div class="stat-label">Titulos</div></div>
+        <div><div class="stat-num">5+</div><div class="stat-label">Anos</div></div>
+        <div><div class="stat-num">&#127462;&#127479;</div><div class="stat-label">Todo el pais</div></div>
       </div>
     </div>
     <div class="hero-visual">
@@ -264,15 +260,15 @@ footer{background:var(--ink);color:#6a5f54;padding:48px 24px 24px;}
 <!-- STRIP -->
 <div class="strip">
   <div class="strip-track">
-    <span class="strip-item">&#128230; Envíos a todo Argentina</span><span class="strip-dot"></span>
+    <span class="strip-item">&#128230; Envios a todo Argentina</span><span class="strip-dot"></span>
     <span class="strip-item">&#128179; Mercado Pago</span><span class="strip-dot"></span>
-    <span class="strip-item">&#128172; Atención por WhatsApp</span><span class="strip-dot"></span>
-    <span class="strip-item">&#128218; 12 títulos disponibles</span><span class="strip-dot"></span>
+    <span class="strip-item">&#128172; Atencion por WhatsApp</span><span class="strip-dot"></span>
+    <span class="strip-item">&#128218; 12 titulos disponibles</span><span class="strip-dot"></span>
     <span class="strip-item">&#10013; Editorial Cristiana Argentina</span><span class="strip-dot"></span>
-    <span class="strip-item">&#128230; Envíos a todo Argentina</span><span class="strip-dot"></span>
+    <span class="strip-item">&#128230; Envios a todo Argentina</span><span class="strip-dot"></span>
     <span class="strip-item">&#128179; Mercado Pago</span><span class="strip-dot"></span>
-    <span class="strip-item">&#128172; Atención por WhatsApp</span><span class="strip-dot"></span>
-    <span class="strip-item">&#128218; 12 títulos disponibles</span><span class="strip-dot"></span>
+    <span class="strip-item">&#128172; Atencion por WhatsApp</span><span class="strip-dot"></span>
+    <span class="strip-item">&#128218; 12 titulos disponibles</span><span class="strip-dot"></span>
     <span class="strip-item">&#10013; Editorial Cristiana Argentina</span><span class="strip-dot"></span>
   </div>
 </div>
@@ -281,16 +277,16 @@ footer{background:var(--ink);color:#6a5f54;padding:48px 24px 24px;}
 <section class="section" id="catalogo">
   <div class="section-inner">
     <div class="section-head">
-      <div class="eyebrow">Catálogo completo</div>
+      <div class="eyebrow">Catalogo completo</div>
       <h2>Nuestros libros</h2>
-      <p>Hacé clic en "Mercado Pago" para comprar directo, o en "WhatsApp" para consultar antes de comprar.</p>
+      <p>Compra en Amazon o Mercado Libre, o escribinos por WhatsApp para pagar al precio de la web con Mercado Pago o transferencia.</p>
     </div>
     <div class="filters">
       <button class="filter-btn active" onclick="filterBooks('todos',this)">Todos (12)</button>
       <button class="filter-btn" onclick="filterBooks('novela',this)">Novelas</button>
       <button class="filter-btn" onclick="filterBooks('infantil',this)">Infantiles</button>
       <button class="filter-btn" onclick="filterBooks('cristiano',this)">Vida Cristiana</button>
-      <button class="filter-btn" onclick="filterBooks('promo',this)">En promoción</button>
+      <button class="filter-btn" onclick="filterBooks('promo',this)">En promocion</button>
       <button class="filter-btn" onclick="filterBooks('stock',this)">Con stock</button>
     </div>
     <div class="books-grid" id="booksGrid"></div>
@@ -301,15 +297,15 @@ footer{background:var(--ink);color:#6a5f54;padding:48px 24px 24px;}
 <section class="about-strip" id="nosotros">
   <div class="about-inner">
     <div class="about-text">
-      <span class="eyebrow">Quiénes somos</span>
-      <h2>Una editorial con propósito</h2>
+      <span class="eyebrow">Quienes somos</span>
+      <h2>Una editorial con proposito</h2>
       <p>Somos una editorial argentina especializada en literatura cristiana. Creemos en el poder de los libros para transformar vidas, fortalecer familias y nutrir la fe.</p>
-      <p>Cada título que publicamos pasa por un proceso cuidadoso de edición para garantizar calidad literaria y fidelidad espiritual.</p>
+      <p>Cada titulo que publicamos pasa por un proceso cuidadoso de edicion para garantizar calidad literaria y fidelidad espiritual.</p>
     </div>
     <div class="about-features">
-      <div class="af"><div class="af-icon">&#128230;</div><div><h4>Enviamos a todo el país</h4><p>Correo Argentino y Andreani. Coordinamos el envío por WhatsApp una vez confirmado el pago.</p></div></div>
-      <div class="af"><div class="af-icon">&#128179;</div><div><h4>Pagás con Mercado Pago</h4><p>Tarjetas de crédito, débito, transferencia o efectivo en puntos de pago. Seguro y sin sorpresas.</p></div></div>
-      <div class="af"><div class="af-icon">&#128172;</div><div><h4>Atención personalizada</h4><p>Respondemos por WhatsApp. Podés consultar antes de comprar o pedir recomendaciones.</p></div></div>
+      <div class="af"><div class="af-icon">&#128230;</div><div><h4>Enviamos a todo el pais</h4><p>Correo Argentino y Andreani. Coordinamos el envio por WhatsApp una vez confirmado el pago.</p></div></div>
+      <div class="af"><div class="af-icon">&#128179;</div><div><h4>Paga con Mercado Pago o transferencia</h4><p>Escribinos por WhatsApp, coordinamos tu pedido y te enviamos el link de pago o alias.</p></div></div>
+      <div class="af"><div class="af-icon">&#128172;</div><div><h4>Atencion personalizada</h4><p>Respondemos por WhatsApp. Podes pedir varios libros en un solo pedido y coordinamos todo.</p></div></div>
     </div>
   </div>
 </section>
@@ -318,8 +314,8 @@ footer{background:var(--ink);color:#6a5f54;padding:48px 24px 24px;}
 <section class="contact-section" id="contacto">
   <div class="contact-inner">
     <span class="eyebrow">Contacto</span>
-    <h2>¿Tenés alguna consulta?</h2>
-    <p>Escribinos por WhatsApp o mandanos un mail. Respondemos a la brevedad de lunes a sábado.</p>
+    <h2>Tenes alguna consulta?</h2>
+    <p>Escribinos por WhatsApp o mandanos un mail. Respondemos a la brevedad de lunes a sabado.</p>
     <div class="contact-buttons">
       <a href="https://wa.me/5491165454453?text=Hola!%20Quiero%20consultar%20sobre%20los%20libros" class="btn-wa-big" target="_blank">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -339,13 +335,13 @@ footer{background:var(--ink);color:#6a5f54;padding:48px 24px 24px;}
     <div class="footer-top">
       <div class="footer-brand">
         <div class="fn">&#10013; delibroscristianos</div>
-        <p>Editorial argentina especializada en libros de fe, valores y espiritualidad cristiana. Llevamos la Palabra a cada rincón del país.</p>
+        <p>Editorial argentina especializada en libros de fe, valores y espiritualidad cristiana. Llevamos la Palabra a cada rincon del pais.</p>
       </div>
       <div class="footer-col">
-        <h4>Navegación</h4>
+        <h4>Navegacion</h4>
         <ul>
           <li><a href="#">Inicio</a></li>
-          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#catalogo">Catalogo</a></li>
           <li><a href="#nosotros">Nosotros</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
@@ -363,7 +359,7 @@ footer{background:var(--ink);color:#6a5f54;padding:48px 24px 24px;}
           </span>
           <span>
             <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-            Envíos a todo Argentina
+            Envios a todo Argentina
           </span>
         </div>
       </div>
@@ -377,7 +373,7 @@ footer{background:var(--ink);color:#6a5f54;padding:48px 24px 24px;}
 
 <!-- COOKIE -->
 <div class="cookie" id="cookie">
-  <span>Este sitio usa cookies para mejorar tu experiencia de navegación.</span>
+  <span>Este sitio usa cookies para mejorar tu experiencia de navegacion.</span>
   <button onclick="document.getElementById('cookie').classList.add('hidden')">Entendido</button>
 </div>
 
@@ -385,18 +381,18 @@ footer{background:var(--ink);color:#6a5f54;padding:48px 24px 24px;}
 var PHONE = '5491165454453';
 
 var books = [
-  { id:1,  title:'Stephanie y el camino invisible de Dios',             sub:null,                        cat:'novela',    price:34000, promo:null,  stock:10,  color:'bc-0',  img:'stephanie.jpg',      mpLink:'#', mlLink:'#', amzLink:'https://a.co/d/02YgEh9F' },
-  { id:2,  title:'Fundamentos para conocer a Dios',                     sub:null,                        cat:'cristiano', price:20000, promo:15000, stock:15,  color:'bc-3',  img:'fundamentos.jpg',    mpLink:'#', mlLink:'#', amzLink:'#' },
-  { id:3,  title:'Sofie de Sangendrup: y el Castillo de las Sombras',   sub:'Español',                   cat:'novela',    price:28000, promo:23000, stock:40,  color:'bc-10', img:'sofie-ingles.jpg',   mpLink:'#', mlLink:'#', amzLink:'https://a.co/d/07VapGaI' },
-  { id:4,  title:'Sofie of Sangendrup: and the Castle of Shadows',      sub:'English / Ingles',          cat:'novela',    price:45000, promo:null,  stock:0,   color:'bc-2',  img:'sofie-ingles.jpg',   mpLink:'#', mlLink:'#', amzLink:'https://a.co/d/0ddmFmlO' },
-  { id:5,  title:'Eres Padre, Eres Hijo: Necesitas Saberlo',            sub:null,                        cat:'cristiano', price:20000, promo:15000, stock:20,  color:'bc-6',  img:'eres-padre.jpg',     mpLink:'#', mlLink:'#', amzLink:'https://a.co/d/08zWirYR' },
-  { id:6,  title:'Dormo, el Huerfano, los Gigantes y otras historias',  sub:null,                        cat:'novela',    price:16000, promo:14000, stock:30,  color:'bc-7',  img:'dormo.jpg',          mpLink:'#', mlLink:'#', amzLink:'#' },
-  { id:7,  title:'Estas Princesas daran que hablar',                    sub:'Tapa Flexible',             cat:'infantil',  price:23000, promo:20000, stock:100, color:'bc-1',  img:'princesas.jpg',      mpLink:'#', mlLink:'#', amzLink:'#' },
-  { id:8,  title:'Sucedio en Navidad',                                  sub:'Incluye recetas de cocina', cat:'novela',    price:16000, promo:12000, stock:20,  color:'bc-4',  img:'sucedio-navidad.jpg',mpLink:'#', mlLink:'#', amzLink:'#' },
-  { id:9,  title:'La Ratita Rita',                                      sub:null,                        cat:'infantil',  price:22000, promo:null,  stock:50,  color:'bc-5',  img:'ratita-rita.jpg',    mpLink:'#', mlLink:'#', amzLink:'#' },
-  { id:10,  title:'Cuentan que en Navidad',                             sub:null,                        cat:'novela',    price:null,  promo:null,  stock:0,   color:'bc-8',  img:'cuentan-navidad.jpg',mpLink:'#', mlLink:'#', amzLink:'#' },
-  { id:11,  title:'Mantequilla y Miel: Meditaciones Bíblicas',          sub:'Español',                   cat:'cristiano', price:25000, promo:20000, stock:50,  color:'bc-9',  img:'mantequilla.jpg',    mpLink:'#', mlLink:'#', amzLink:'https://a.co/d/0ioYcCiF' },
-  { id:12,  title:'Butter and Honey: Bible Meditations',                sub:'English / Ingles',          cat:'cristiano', price:25000, promo:20000, stock:0,   color:'bc-9',  img:'mantequilla.jpg',    mpLink:'#', mlLink:'#', amzLink:'https://a.co/d/01dR3QCT' }
+  { id:1,  title:'Stephanie y el camino invisible de Dios',             sub:null,                        cat:'novela',    price:34000, promo:null,  stock:10,  color:'bc-0',  img:'stephanie.jpg',       mlLink:'#', amzLink:'https://a.co/d/02YgEh9F' },
+  { id:2,  title:'Fundamentos para conocer a Dios',                     sub:null,                        cat:'cristiano', price:20000, promo:15000, stock:15,  color:'bc-3',  img:'fundamentos.jpg',     mlLink:'#', amzLink:'#' },
+  { id:3,  title:'Sofie de Sangendrup: y el Castillo de las Sombras',   sub:'Espanol',                   cat:'novela',    price:28000, promo:23000, stock:40,  color:'bc-10', img:'sofie-ingles.jpg',    mlLink:'#', amzLink:'https://a.co/d/07VapGaI' },
+  { id:4,  title:'Sofie of Sangendrup: and the Castle of Shadows',      sub:'English / Ingles',          cat:'novela',    price:45000, promo:null,  stock:0,   color:'bc-2',  img:'sofie-ingles.jpg',    mlLink:'#', amzLink:'https://a.co/d/0ddmFmlO' },
+  { id:5,  title:'Eres Padre, Eres Hijo: Necesitas Saberlo',            sub:null,                        cat:'cristiano', price:20000, promo:15000, stock:20,  color:'bc-6',  img:'eres-padre.jpg',      mlLink:'#', amzLink:'https://a.co/d/08zWirYR' },
+  { id:6,  title:'Dormo, el Huerfano, los Gigantes y otras historias',  sub:null,                        cat:'novela',    price:16000, promo:14000, stock:30,  color:'bc-7',  img:'dormo.jpg',           mlLink:'#', amzLink:'#' },
+  { id:7,  title:'Estas Princesas daran que hablar',                    sub:'Tapa Flexible',             cat:'infantil',  price:23000, promo:20000, stock:100, color:'bc-1',  img:'princesas.jpg',       mlLink:'#', amzLink:'#' },
+  { id:8,  title:'Sucedio en Navidad',                                  sub:'Incluye recetas de cocina', cat:'novela',    price:16000, promo:12000, stock:20,  color:'bc-4',  img:'sucedio-navidad.jpg', mlLink:'#', amzLink:'#' },
+  { id:9,  title:'La Ratita Rita',                                      sub:null,                        cat:'infantil',  price:22000, promo:null,  stock:50,  color:'bc-5',  img:'ratita-rita.jpg',     mlLink:'#', amzLink:'#' },
+  { id:10, title:'Cuentan que en Navidad',                              sub:null,                        cat:'novela',    price:null,  promo:null,  stock:0,   color:'bc-8',  img:'cuentan-navidad.jpg', mlLink:'#', amzLink:'#' },
+  { id:11, title:'Mantequilla y Miel: Meditaciones Biblicas',           sub:'Espanol',                   cat:'cristiano', price:25000, promo:20000, stock:50,  color:'bc-9',  img:'mantequilla.jpg',     mlLink:'#', amzLink:'https://a.co/d/0ioYcCiF' },
+  { id:12, title:'Butter and Honey: Bible Meditations',                 sub:'English / Ingles',          cat:'cristiano', price:25000, promo:20000, stock:0,   color:'bc-9',  img:'mantequilla.jpg',     mlLink:'#', amzLink:'https://a.co/d/01dR3QCT' }
 ];
 
 var catLabel = { novela:'Novela', infantil:'Infantil', cristiano:'Vida Cristiana' };
@@ -405,10 +401,14 @@ function fmt(n) {
   return '$' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 }
 
+var waSVG = '<svg viewBox="0 0 24 24" style="width:11px;height:11px;fill:white;flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>';
+
 function buildCard(b, delay) {
   var avail = b.stock > 0 && b.price !== null;
   var price = b.promo || b.price;
-  var waMsg = encodeURIComponent('Hola! Quiero llevarme "' + b.title + '"' + (b.sub ? ' (' + b.sub + ')' : '') + '. Como arrancamos?');  var waLink = 'https://wa.me/' + PHONE + '?text=' + waMsg;
+  var waMsg = encodeURIComponent('Hola! Quiero llevarme "' + b.title + '"' + (b.sub ? ' (' + b.sub + ')' : '') + '. Como arrancamos?');
+  var waLink = 'https://wa.me/' + PHONE + '?text=' + waMsg;
+
   var badges = '';
   if (b.stock === 0) badges += '<span class="badge b-agotado">Sin stock</span>';
   if (b.promo && avail) badges += '<span class="badge b-promo">Oferta</span>';
@@ -427,23 +427,22 @@ function buildCard(b, delay) {
                 '<span class="p-final ' + (b.promo ? 'p-promo' : '') + '">' + fmt(price) + '</span>';
   }
 
-  var mpBtn = '<button class="btn-mp"' + (!avail ? ' disabled' : '') + ' onclick="buyMP(\'' + b.mpLink + '\',\'' + b.title.replace(/'/g,"\\'") + '\',\'mp\')">' +
-    '<svg viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>' +
-    (avail ? 'Mercado Pago' : 'Sin stock') + '</button>';
-
-  var mlBtn = '<button class="btn-ml"' + (!avail ? ' disabled' : '') + ' onclick="buyMP(\'' + b.mlLink + '\',\'' + b.title.replace(/'/g,"\\'") + '\',\'ml\')">' +
+  var mlBtn = '<button class="btn-ml"' + (!avail ? ' disabled' : '') + ' onclick="openLink(\'' + b.mlLink + '\',\'' + b.title.replace(/'/g,"\\'") + '\',\'ml\')">' +
     '&#127868; Mercado Libre</button>';
 
-  var amzBtn = '<button class="btn-amz"' + (!avail ? ' disabled' : '') + ' onclick="buyMP(\'' + b.amzLink + '\',\'' + b.title.replace(/'/g,"\\'") + '\',\'amz\')">' +
+  var amzBtn = '<button class="btn-amz"' + (!avail ? ' disabled' : '') + ' onclick="openLink(\'' + b.amzLink + '\',\'' + b.title.replace(/'/g,"\\'") + '\',\'amz\')">' +
     '&#128230; Amazon</button>';
 
-  var waBtn = '<a class="btn-wa' + (!avail ? ' disabled' : '') + '" href="' + (avail ? waLink : '#') + '" ' + (avail ? 'target="_blank"' : '') + '>' +
-    '<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>' +
-    'WhatsApp</a>';
+  var waBtn = '<button class="btn-wa-book' + (!avail ? ' disabled' : '') + '"' +
+    (avail ? ' onclick="window.open(\'' + waLink + '\',\'_blank\')"' : '') + '>' +
+    '<span class="wa-main">' + waSVG + ' Paga con MP o transferencia</span>' +
+    '<span class="wa-sub">al precio de la web</span>' +
+    '</button>';
 
   return '<div class="book-card" style="animation-delay:' + delay + 'ms">' +
     '<div class="book-cover-wrap">' +
-    '<img src="' + b.img + '" alt="' + b.title + '" style="height:100%;width:100%;object-fit:cover;" onerror="this.style.display=\'none\'">' + '<div class="badge-wrap">' + badges + '</div>' +
+      '<img src="' + b.img + '" alt="' + b.title + '" style="height:100%;width:100%;object-fit:cover;" onerror="this.style.display=\'none\'">' +
+      '<div class="badge-wrap">' + badges + '</div>' +
     '</div>' +
     '<div class="book-body">' +
       '<div class="book-cat">' + (catLabel[b.cat] || b.cat) + '</div>' +
@@ -451,7 +450,10 @@ function buildCard(b, delay) {
       (b.sub ? '<div class="book-sub">' + b.sub + '</div>' : '') +
       '<div class="stock-info ' + stockCls + '">' + stockTxt + '</div>' +
       '<div class="price-row">' + priceHtml + '</div>' +
-      '<div class="book-actions">' + mpBtn + mlBtn + amzBtn + waBtn + '</div>' +
+      '<div class="book-actions">' +
+        '<div class="btns-top">' + mlBtn + amzBtn + '</div>' +
+        waBtn +
+      '</div>' +
     '</div></div>';
 }
 
@@ -474,10 +476,10 @@ function filterBooks(f, btn) {
   render(list);
 }
 
-function buyMP(link, title, platform) {
+function openLink(link, title, platform) {
   if (link === '#') {
-    var platformName = platform === 'ml' ? 'Mercado Libre' : platform === 'amz' ? 'Amazon' : 'Mercado Pago';
-    var msg = encodeURIComponent('Hola! Quiero comprar "' + title + '" por ' + platformName + '. Me podes ayudar?');
+    var platformName = platform === 'ml' ? 'Mercado Libre' : 'Amazon';
+    var msg = encodeURIComponent('Hola! Quiero llevarme "' + title + '". Tienen publicacion en ' + platformName + '?');
     window.open('https://wa.me/' + PHONE + '?text=' + msg, '_blank');
   } else {
     window.open(link, '_blank');
